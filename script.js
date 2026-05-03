@@ -3,7 +3,7 @@ const WEDDING_DATE = "2027-05-30T14:00:00+02:00";
 
 const copy = {
   en: {
-    brand: "Phillip & Luis",
+    brand: "Phillip Pratt & Luis Arocas",
     navHome: "Home",
     navSchedule: "Details",
     navHotels: "Stay",
@@ -11,8 +11,8 @@ const copy = {
     navFaq: "FAQ",
     rsvp: "RSVP",
     heroKicker: "Together with their families",
-    firstName: "Luis",
-    secondName: "Phillip",
+    firstName: "Luis Arocas",
+    secondName: "Phillip Pratt",
     date: "May 30, 2027",
     place: "Madrid, Spain",
     days: "days",
@@ -87,7 +87,7 @@ const copy = {
     menuButton: "Sections",
   },
   es: {
-    brand: "Phillip & Luis",
+    brand: "Phillip Pratt & Luis Arocas",
     navHome: "Inicio",
     navSchedule: "Detalles",
     navHotels: "Alojamiento",
@@ -95,8 +95,8 @@ const copy = {
     navFaq: "Preguntas",
     rsvp: "RSVP",
     heroKicker: "Junto a sus familias",
-    firstName: "Luis",
-    secondName: "Phillip",
+    firstName: "Luis Arocas",
+    secondName: "Phillip Pratt",
     date: "30 de mayo de 2027",
     place: "Hoyo de Manzanares, Madrid",
     days: "días",
@@ -178,6 +178,8 @@ const backToTop = document.querySelector("#backToTop");
 const sectionMenu = document.querySelector("#sectionMenu");
 const sectionMenuToggle = document.querySelector("#sectionMenuToggle");
 const rsvpLinks = [document.querySelector("#rsvpHeaderLink"), document.querySelector("#rsvpHeroLink")];
+const faqItems = Array.from(document.querySelectorAll(".faq-list details"));
+const mobileFaqMedia = window.matchMedia("(max-width: 540px)");
 
 let language = localStorage.getItem("wedding-language") || "en";
 
@@ -203,6 +205,13 @@ function updateCountdown() {
   document.querySelector("#days").textContent = String(days).padStart(3, "0");
   document.querySelector("#hours").textContent = String(hours).padStart(2, "0");
   document.querySelector("#minutes").textContent = String(minutes).padStart(2, "0");
+}
+
+function syncFaqState() {
+  const shouldOpen = !mobileFaqMedia.matches;
+  faqItems.forEach((item) => {
+    item.open = shouldOpen;
+  });
 }
 
 document.querySelectorAll("[data-language-choice]").forEach((button) => {
@@ -237,6 +246,8 @@ window.addEventListener("scroll", () => {
   }
 });
 
+mobileFaqMedia.addEventListener("change", syncFaqState);
+
 rsvpLinks.forEach((link) => {
   link.href = RSVP_URL;
 });
@@ -246,5 +257,6 @@ if (localStorage.getItem("wedding-language")) {
 }
 
 setLanguage(language);
+syncFaqState();
 updateCountdown();
 setInterval(updateCountdown, 60_000);
