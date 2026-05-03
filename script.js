@@ -14,7 +14,7 @@ const copy = {
     firstName: "Luis Arocas",
     secondName: "Phillip Pratt",
     date: "May 30, 2027",
-    place: "Madrid, Spain",
+    place: "Hoyo de Manzanares, Madrid",
     days: "days",
     hours: "hours",
     minutes: "minutes",
