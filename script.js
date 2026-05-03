@@ -3,7 +3,7 @@ const WEDDING_DATE = "2027-05-30T14:00:00+02:00";
 
 const copy = {
   en: {
-    brand: "Phillip Pratt & Luis Arocas",
+    brand: "Phillip & Luis",
     navHome: "Home",
     navSchedule: "Details",
     navHotels: "Stay",
@@ -87,7 +87,7 @@ const copy = {
     menuButton: "Sections",
   },
   es: {
-    brand: "Phillip Pratt & Luis Arocas",
+    brand: "Phillip & Luis",
     navHome: "Inicio",
     navSchedule: "Detalles",
     navHotels: "Alojamiento",

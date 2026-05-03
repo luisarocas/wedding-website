@@ -661,7 +661,7 @@ main,
     min-height: calc(100vh - 6.25rem);
     padding-top: 3.1rem;
     padding-inline: 1.2rem;
-    padding-bottom: 52vw;
+    padding-bottom: 44vw;
   }
 
   .hero-inner {
@@ -689,6 +689,10 @@ main,
     margin-top: 1rem;
     font-size: 0.74rem;
     line-height: 1.6;
+  }
+
+  #schedule.section {
+    padding-top: 2.2rem;
   }
 
   .button.large {
