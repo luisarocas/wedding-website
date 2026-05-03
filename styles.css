@@ -666,7 +666,7 @@ main,
 
   .hero-inner {
     width: min(20rem, 100%);
-    transform: translateY(1.65rem);
+    transform: translateY(2.15rem);
   }
 
   .hero h1 {
@@ -715,15 +715,15 @@ main,
   .countdown span {
     flex: 1 1 0;
     min-width: 0;
-    padding: 0.65rem 0.35rem;
+    padding: 0.5rem 0.28rem;
   }
 
   .countdown strong {
-    font-size: 1.35rem;
+    font-size: 1.12rem;
   }
 
   .countdown small {
-    font-size: 0.56rem;
+    font-size: 0.5rem;
   }
 
   .button,
