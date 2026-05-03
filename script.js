@@ -83,6 +83,7 @@ const copy = {
     faqSevenA: "The ceremony will be held outdoors, weather permitting, followed by an indoor reception. Please plan accordingly.",
     faqEightQ: "Special dietary needs?",
     faqEightA: "Please indicate any dietary restrictions when you RSVP, and we will do our best to accommodate you.",
+    topButton: "Top",
   },
   es: {
     brand: "Phillip & Luis",
@@ -165,11 +166,13 @@ const copy = {
     faqSevenA: "La ceremonia será al aire libre, si el clima lo permite, seguida de una recepción en interior. Por favor, planificad en consecuencia.",
     faqEightQ: "¿Necesidades alimentarias especiales?",
     faqEightA: "Indicad cualquier restricción alimentaria al confirmar vuestra asistencia, e intentaremos acomodarla.",
+    topButton: "Arriba",
   },
 };
 
 const gate = document.querySelector("#languageGate");
 const toggle = document.querySelector("#languageToggle");
+const backToTop = document.querySelector("#backToTop");
 const rsvpLinks = [document.querySelector("#rsvpHeaderLink"), document.querySelector("#rsvpHeroLink")];
 
 let language = localStorage.getItem("wedding-language") || "en";
@@ -207,6 +210,14 @@ document.querySelectorAll("[data-language-choice]").forEach((button) => {
 
 toggle.addEventListener("click", () => {
   setLanguage(language === "en" ? "es" : "en");
+});
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+window.addEventListener("scroll", () => {
+  backToTop.classList.toggle("is-visible", window.scrollY > 500);
 });
 
 rsvpLinks.forEach((link) => {
