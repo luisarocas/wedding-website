@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
     <title>Phillip & Luis</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,10 +39,10 @@
       <a class="brand" href="#home" data-i18n="brand">Phillip & Luis</a>
       <nav class="desktop-nav" aria-label="Main navigation">
         <a href="#home" data-i18n="navHome">Home</a>
-        <a href="#schedule" data-i18n="navSchedule">Schedule & Location</a>
-        <a href="#hotels" data-i18n="navHotels">Hotels & Shuttle</a>
-        <a href="#travel" data-i18n="navTravel">Travel to Madrid</a>
-        <a href="#faq" data-i18n="navFaq">FAQs</a>
+        <a href="#schedule" data-i18n="navSchedule">Details</a>
+        <a href="#hotels" data-i18n="navHotels">Stay</a>
+        <a href="#travel" data-i18n="navTravel">Travel</a>
+        <a href="#faq" data-i18n="navFaq">FAQ</a>
       </nav>
       <div class="header-actions">
         <button class="lang-toggle" id="languageToggle" type="button" aria-label="Switch language">ES</button>
@@ -54,9 +55,9 @@
         <div class="hero-inner">
           <p class="kicker" data-i18n="heroKicker">Together with their families</p>
           <h1>
-            <span data-i18n="firstName">Luis Arocas</span>
+            <span data-i18n="firstName">Luis</span>
             <span class="amp">&amp;</span>
-            <span data-i18n="secondName">Phillip Pratt</span>
+            <span data-i18n="secondName">Phillip</span>
           </h1>
           <p class="date" data-i18n="date">May 30, 2027</p>
           <p class="place" data-i18n="place">Madrid, Spain</p>
@@ -73,7 +74,7 @@
       <section class="section" id="schedule">
         <div class="section-heading">
           <p class="kicker" data-i18n="scheduleKicker">The celebration</p>
-          <h2 data-i18n="scheduleTitle">Schedule & Location</h2>
+          <h2 data-i18n="scheduleTitle">Details</h2>
         </div>
         <div class="timeline">
           <article>
@@ -92,7 +93,7 @@
       <section class="section split" id="hotels">
         <div class="section-heading">
           <p class="kicker" data-i18n="hotelsKicker">Stay close</p>
-          <h2 data-i18n="hotelsTitle">Hotels & Shuttle</h2>
+          <h2 data-i18n="hotelsTitle">Stay</h2>
         </div>
         <div class="copy-stack">
           <p data-i18n="hotelsBody">Our venue is located in Hoyo de Manzanares, about 30-40 minutes outside the city. Renting a car can be helpful if you plan to explore the area, and parking will be available at the venue, but driving is not necessary for the wedding.</p>
@@ -118,7 +119,7 @@
       <section class="section split muted" id="travel">
         <div>
           <p class="kicker" data-i18n="travelKicker">For guests flying in</p>
-          <h2 data-i18n="travelTitle">Travel to Madrid</h2>
+          <h2 data-i18n="travelTitle">Travel</h2>
         </div>
         <div class="copy-stack">
           <p data-i18n="travelBody">If you need to travel for the wedding, we recommend booking flights to Madrid 6-9 months in advance for the best prices and availability.</p>
@@ -156,7 +157,7 @@
       <section class="section" id="faq">
         <div class="section-heading">
           <p class="kicker" data-i18n="faqKicker">Good to know</p>
-          <h2 data-i18n="faqTitle">FAQs</h2>
+          <h2 data-i18n="faqTitle">FAQ</h2>
           <p class="section-note" data-i18n="faqIntro">If you have any additional questions, please feel free to text us directly.</p>
         </div>
         <div class="faq-list">
@@ -199,6 +200,17 @@
     <footer class="site-footer">
       <p>Phillip & Luis / May 30, 2027</p>
     </footer>
+
+    <button class="section-menu-toggle" id="sectionMenuToggle" type="button" data-i18n="menuButton">Sections</button>
+    <div class="section-menu" id="sectionMenu">
+      <div class="section-menu-panel">
+        <a href="#home" data-i18n="navHome">Home</a>
+        <a href="#schedule" data-i18n="navSchedule">Details</a>
+        <a href="#hotels" data-i18n="navHotels">Stay</a>
+        <a href="#travel" data-i18n="navTravel">Travel</a>
+        <a href="#faq" data-i18n="navFaq">FAQ</a>
+      </div>
+    </div>
 
     <button class="back-to-top" id="backToTop" type="button" data-i18n="topButton">Top</button>
 

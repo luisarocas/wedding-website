@@ -5,14 +5,14 @@ const copy = {
   en: {
     brand: "Phillip & Luis",
     navHome: "Home",
-    navSchedule: "Schedule & Location",
-    navHotels: "Hotels & Shuttle",
-    navTravel: "Travel to Madrid",
-    navFaq: "FAQs",
+    navSchedule: "Details",
+    navHotels: "Stay",
+    navTravel: "Travel",
+    navFaq: "FAQ",
     rsvp: "RSVP",
     heroKicker: "Together with their families",
-    firstName: "Luis Arocas",
-    secondName: "Phillip Pratt",
+    firstName: "Luis",
+    secondName: "Phillip",
     date: "May 30, 2027",
     place: "Madrid, Spain",
     days: "days",
@@ -20,7 +20,7 @@ const copy = {
     minutes: "minutes",
     banner: "We can’t wait to celebrate with you. RSVPs for our celebration in Spain will open in August 2026.",
     scheduleKicker: "The celebration",
-    scheduleTitle: "Schedule & Location",
+    scheduleTitle: "Details",
     scheduleCardTitle: "Ceremony & Celebration",
     scheduleBody:
       "The ceremony will begin at 2:00 PM. Afterwards, we’ll continue with cocktails, appetizers, dinner, music, and dancing until midnight.",
@@ -36,7 +36,7 @@ const copy = {
     attire: "Formal attire",
     mapLink: "View map",
     hotelsKicker: "Stay close",
-    hotelsTitle: "Hotels & Shuttle",
+    hotelsTitle: "Stay",
     hotelsBody:
       "Our venue is located in Hoyo de Manzanares, about 30-40 minutes outside the city. Renting a car can be helpful if you plan to explore the area, and parking will be available at the venue, but driving is not necessary for the wedding.",
     hotelPaxTitle: "Hotel Pax Torrelodones",
@@ -50,7 +50,7 @@ const copy = {
     hotelPaxLink: "View hotel",
     hotelExeLink: "View hotel",
     travelKicker: "For guests flying in",
-    travelTitle: "Travel to Madrid",
+    travelTitle: "Travel",
     travelBody:
       "If you need to travel for the wedding, we recommend booking flights to Madrid 6-9 months in advance for the best prices and availability.",
     airportTitle: "Airport",
@@ -59,7 +59,7 @@ const copy = {
     arrivalBody:
       "We recommend arriving at least one day before the wedding. Two days before is ideal if you're coming from abroad.",
     faqKicker: "Good to know",
-    faqTitle: "FAQs",
+    faqTitle: "FAQ",
     faqIntro: "If you have any additional questions, please feel free to text us directly.",
     faqOneQ: "When should I RSVP?",
     faqOneA:
@@ -84,18 +84,19 @@ const copy = {
     faqEightQ: "Special dietary needs?",
     faqEightA: "Please indicate any dietary restrictions when you RSVP, and we will do our best to accommodate you.",
     topButton: "Top",
+    menuButton: "Sections",
   },
   es: {
     brand: "Phillip & Luis",
     navHome: "Inicio",
-    navSchedule: "Programa y lugar",
-    navHotels: "Hoteles y autobús",
-    navTravel: "Viaje a Madrid",
+    navSchedule: "Detalles",
+    navHotels: "Alojamiento",
+    navTravel: "Viaje",
     navFaq: "Preguntas",
     rsvp: "RSVP",
     heroKicker: "Junto a sus familias",
-    firstName: "Luis Arocas",
-    secondName: "Phillip Pratt",
+    firstName: "Luis",
+    secondName: "Phillip",
     date: "30 de mayo de 2027",
     place: "Hoyo de Manzanares, Madrid",
     days: "días",
@@ -103,7 +104,7 @@ const copy = {
     minutes: "minutos",
     banner: "Tenemos muchas ganas de celebrarlo con vosotros. Podréis confirmar vuestra asistencia a partir de agosto de 2026.",
     scheduleKicker: "La celebración",
-    scheduleTitle: "Programa y lugar",
+    scheduleTitle: "Detalles",
     scheduleCardTitle: "Ceremonia y celebración",
     scheduleBody:
       "La ceremonia comenzará a las 14:00. Después, continuaremos con cóctel, aperitivos, cena, música y baile hasta medianoche.",
@@ -119,7 +120,7 @@ const copy = {
     attire: "Vestimenta formal",
     mapLink: "Ver mapa",
     hotelsKicker: "Quedaos cerca",
-    hotelsTitle: "Hoteles y autobús",
+    hotelsTitle: "Alojamiento",
     hotelsBody:
       "La finca está en Hoyo de Manzanares, a unos 30-40 minutos de Madrid. Habrá aparcamiento disponible, así que podéis venir en coche si queréis o utilizar el autobús.",
     hotelPaxTitle: "Hotel Pax Torrelodones",
@@ -133,7 +134,7 @@ const copy = {
     hotelPaxLink: "Ver hotel",
     hotelExeLink: "Ver hotel",
     travelKicker: "Para quienes vuelan",
-    travelTitle: "Viaje a Madrid",
+    travelTitle: "Viaje",
     travelBody:
       "En caso de que tengáis que viajar para la boda, recomendamos reservar vuelos a Madrid con 6-9 meses de antelación para conseguir mejores precios y disponibilidad.",
     airportTitle: "Aeropuerto",
@@ -142,7 +143,7 @@ const copy = {
     arrivalBody:
       "Recomendamos llegar al menos un día antes de la boda. Si viajáis desde el extranjero, lo ideal es llegar dos días antes.",
     faqKicker: "Información útil",
-    faqTitle: "Preguntas frecuentes",
+    faqTitle: "Preguntas",
     faqIntro: "Si tenéis alguna otra pregunta, no dudéis en escribirnos directamente.",
     faqOneQ: "¿Cuándo debemos confirmar asistencia?",
     faqOneA:
@@ -167,12 +168,15 @@ const copy = {
     faqEightQ: "¿Necesidades alimentarias especiales?",
     faqEightA: "Indicad cualquier restricción alimentaria al confirmar vuestra asistencia, e intentaremos acomodarla.",
     topButton: "Arriba",
+    menuButton: "Secciones",
   },
 };
 
 const gate = document.querySelector("#languageGate");
 const toggle = document.querySelector("#languageToggle");
 const backToTop = document.querySelector("#backToTop");
+const sectionMenu = document.querySelector("#sectionMenu");
+const sectionMenuToggle = document.querySelector("#sectionMenuToggle");
 const rsvpLinks = [document.querySelector("#rsvpHeaderLink"), document.querySelector("#rsvpHeroLink")];
 
 let language = localStorage.getItem("wedding-language") || "en";
@@ -216,8 +220,21 @@ backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+sectionMenuToggle.addEventListener("click", () => {
+  sectionMenu.classList.toggle("is-open");
+});
+
+sectionMenu.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    sectionMenu.classList.remove("is-open");
+  });
+});
+
 window.addEventListener("scroll", () => {
   backToTop.classList.toggle("is-visible", window.scrollY > 500);
+  if (window.scrollY > 200) {
+    sectionMenu.classList.remove("is-open");
+  }
 });
 
 rsvpLinks.forEach((link) => {
