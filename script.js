@@ -1,4 +1,4 @@
-const RSVP_URL = "https://www.zola.com/wedding/luisandphil/rsvp";
+const RSVP_URL = "rsvp.html";
 const WEDDING_DATE = "2027-05-30T14:00:00+02:00";
 
 const copy = {

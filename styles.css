@@ -488,6 +488,47 @@ html[lang="es"] .english-only {
   font-size: 1.5rem;
 }
 
+.notice-page {
+  position: relative;
+  min-height: 100vh;
+  padding: clamp(2rem, 5vw, 3rem) 1.25rem;
+  display: grid;
+  place-items: center;
+}
+
+.notice-card {
+  position: relative;
+  z-index: 1;
+  width: min(34rem, 100%);
+  padding: clamp(2rem, 6vw, 3rem);
+  text-align: center;
+  background: rgba(251, 252, 248, 0.92);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.notice-card h1 {
+  margin: 0;
+  color: var(--deep);
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.notice-card p {
+  margin: 1rem 0 0;
+  line-height: 1.7;
+}
+
+.notice-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
 .back-to-top {
   position: fixed;
   right: 1rem;
@@ -744,6 +785,10 @@ main,
   .rsvp-link {
     width: auto;
     flex: 1;
+  }
+
+  .notice-actions {
+    flex-direction: column;
   }
 
   .back-to-top {

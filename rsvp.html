@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <title>RSVPs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <img
+      class="floral floral-top"
+      src="https://images.zola.com/2f2a85e8-7ad9-4984-886c-dd6a19357088"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="floral floral-bottom"
+      src="https://images.zola.com/77ef4b64-973d-46e7-836f-13b0da264eaf"
+      alt=""
+      aria-hidden="true"
+    />
+
+    <main class="notice-page">
+      <section class="notice-card">
+        <p class="kicker" id="noticeKicker">Thank you for checking</p>
+        <h1 id="noticeTitle">RSVPs are not open yet</h1>
+        <p id="noticeBody">
+          RSVPs for our celebration in Spain will open in August 2026 and close in February 2027.
+        </p>
+        <p id="noticeBodyTwo">Please check back then. We cannot wait to celebrate with you.</p>
+        <div class="notice-actions">
+          <a class="button primary" href="index.html" id="noticeHome">Back to website</a>
+          <button class="lang-toggle" id="noticeLanguageToggle" type="button" aria-label="Switch language">ES</button>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const noticeCopy = {
+        en: {
+          kicker: "Thank you for checking",
+          title: "RSVPs are not open yet",
+          body: "RSVPs for our celebration in Spain will open in August 2026 and close in February 2027.",
+          bodyTwo: "Please check back then. We cannot wait to celebrate with you.",
+          home: "Back to website",
+          toggle: "ES",
+          lang: "en",
+        },
+        es: {
+          kicker: "Gracias por pasaros por aquí",
+          title: "Las confirmaciones todavía no están abiertas",
+          body: "Las confirmaciones para nuestra celebración en España se abrirán en agosto de 2026 y cerrarán en febrero de 2027.",
+          bodyTwo: "Volved a comprobarlo entonces. Tenemos muchas ganas de celebrarlo con vosotros.",
+          home: "Volver a la web",
+          toggle: "EN",
+          lang: "es",
+        },
+      };
+
+      const noticeNodes = {
+        kicker: document.querySelector("#noticeKicker"),
+        title: document.querySelector("#noticeTitle"),
+        body: document.querySelector("#noticeBody"),
+        bodyTwo: document.querySelector("#noticeBodyTwo"),
+        home: document.querySelector("#noticeHome"),
+        toggle: document.querySelector("#noticeLanguageToggle"),
+      };
+
+      let language = localStorage.getItem("wedding-language") || "en";
+
+      function renderNotice(nextLanguage) {
+        language = nextLanguage;
+        const copy = noticeCopy[nextLanguage];
+        document.documentElement.lang = copy.lang;
+        localStorage.setItem("wedding-language", nextLanguage);
+        noticeNodes.kicker.textContent = copy.kicker;
+        noticeNodes.title.textContent = copy.title;
+        noticeNodes.body.textContent = copy.body;
+        noticeNodes.bodyTwo.textContent = copy.bodyTwo;
+        noticeNodes.home.textContent = copy.home;
+        noticeNodes.toggle.textContent = copy.toggle;
+      }
+
+      noticeNodes.toggle.addEventListener("click", () => {
+        renderNotice(language === "en" ? "es" : "en");
+      });
+
+      renderNotice(language);
+    </script>
+  </body>
+</html>
