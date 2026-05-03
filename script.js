@@ -21,7 +21,7 @@ const copy = {
     banner: "We can't wait to celebrate with you. RSVPs for our celebration in Spain will open in August 2026.",
     scheduleKicker: "The celebration",
     scheduleTitle: "Details",
-    scheduleCardTitle: "Ceremony & Celebration",
+    scheduleCardTitle: "Schedule",
     scheduleBody:
       "The ceremony will begin at 2:00 PM. Afterwards, we'll continue with cocktails, appetizers, dinner, music, and dancing until midnight.",
     venueTitle: "La finca de San Antonio",
@@ -96,7 +96,7 @@ const copy = {
     banner: "Tenemos muchas ganas de celebrarlo con vosotros. Podr\u00e9is confirmar vuestra asistencia a partir de agosto de 2026.",
     scheduleKicker: "La celebraci\u00f3n",
     scheduleTitle: "Detalles",
-    scheduleCardTitle: "Ceremonia y celebraci\u00f3n",
+    scheduleCardTitle: "Horario",
     scheduleBody:
       "La ceremonia comenzar\u00e1 a las 14:00. Despu\u00e9s, continuaremos con c\u00f3ctel, aperitivos, cena, m\u00fasica y baile hasta medianoche.",
     venueTitle: "La finca de San Antonio",
