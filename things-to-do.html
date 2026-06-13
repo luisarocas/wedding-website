@@ -27,9 +27,11 @@
     <header class="site-header">
       <a class="brand" href="index.html" id="thingsBrand">Phillip & Luis</a>
       <nav class="desktop-nav" aria-label="Things to do navigation">
-        <a href="index.html" id="thingsNavHome">Home</a>
-        <a href="things-to-do.html" id="thingsNavThings">Things to Do</a>
-        <a href="attire.html" id="thingsNavAttire">Attire</a>
+        <a href="index.html"><span class="desktop-label" id="thingsNavHome">Home</span><span class="mobile-label" id="thingsNavHomeMobile">Home</span></a>
+        <a href="index.html#hotels"><span class="desktop-label" id="thingsNavHotels">Stay</span><span class="mobile-label" id="thingsNavHotelsMobile">Stay</span></a>
+        <a href="things-to-do.html"><span class="desktop-label" id="thingsNavThings">Things to Do</span><span class="mobile-label" id="thingsNavThingsMobile">Plans</span></a>
+        <a href="attire.html"><span class="desktop-label" id="thingsNavAttire">Attire</span><span class="mobile-label" id="thingsNavAttireMobile">Attire</span></a>
+        <a href="faq.html"><span class="desktop-label" id="thingsNavFaq">FAQ</span><span class="mobile-label" id="thingsNavFaqMobile">FAQ</span></a>
       </nav>
       <div class="header-actions">
         <button class="lang-toggle" id="thingsLanguageToggle" type="button" aria-label="Switch language">ES</button>
@@ -143,8 +145,15 @@
         en: {
           brand: "Phillip & Luis",
           navHome: "Home",
+          navHomeMobile: "Home",
+          navHotels: "Stay",
+          navHotelsMobile: "Stay",
           navThings: "Things to Do",
+          navThingsMobile: "Plans",
           navAttire: "Attire",
+          navAttireMobile: "Attire",
+          navFaq: "FAQ",
+          navFaqMobile: "FAQ",
           rsvp: "RSVP",
           heroKicker: "Around the wedding weekend",
           heroTitle: "Things to Do",
@@ -189,8 +198,15 @@
         es: {
           brand: "Phillip & Luis",
           navHome: "Inicio",
+          navHomeMobile: "Inicio",
+          navHotels: "Alojamiento",
+          navHotelsMobile: "Aloj.",
           navThings: "Cosas que hacer",
+          navThingsMobile: "Planes",
           navAttire: "Vestimenta",
+          navAttireMobile: "Vestir",
+          navFaq: "Preguntas",
+          navFaqMobile: "FAQ",
           rsvp: "RSVP",
           heroKicker: "Alrededor del fin de semana de la boda",
           heroTitle: "Cosas que hacer",
@@ -237,8 +253,15 @@
       const thingsNodes = {
         brand: document.querySelector("#thingsBrand"),
         navHome: document.querySelector("#thingsNavHome"),
+        navHomeMobile: document.querySelector("#thingsNavHomeMobile"),
+        navHotels: document.querySelector("#thingsNavHotels"),
+        navHotelsMobile: document.querySelector("#thingsNavHotelsMobile"),
         navThings: document.querySelector("#thingsNavThings"),
+        navThingsMobile: document.querySelector("#thingsNavThingsMobile"),
         navAttire: document.querySelector("#thingsNavAttire"),
+        navAttireMobile: document.querySelector("#thingsNavAttireMobile"),
+        navFaq: document.querySelector("#thingsNavFaq"),
+        navFaqMobile: document.querySelector("#thingsNavFaqMobile"),
         rsvp: document.querySelector("#thingsRsvp"),
         heroKicker: document.querySelector("#thingsHeroKicker"),
         heroTitle: document.querySelector("#thingsHeroTitle"),

@@ -27,9 +27,11 @@
     <header class="site-header">
       <a class="brand" href="index.html" id="attireBrand">Phillip & Luis</a>
       <nav class="desktop-nav" aria-label="Attire navigation">
-        <a href="index.html" id="attireNavHome">Home</a>
-        <a href="things-to-do.html" id="attireNavThings">Things to Do</a>
-        <a href="attire.html" id="attireNavAttire">Attire</a>
+        <a href="index.html"><span class="desktop-label" id="attireNavHome">Home</span><span class="mobile-label" id="attireNavHomeMobile">Home</span></a>
+        <a href="index.html#hotels"><span class="desktop-label" id="attireNavHotels">Stay</span><span class="mobile-label" id="attireNavHotelsMobile">Stay</span></a>
+        <a href="things-to-do.html"><span class="desktop-label" id="attireNavThings">Things to Do</span><span class="mobile-label" id="attireNavThingsMobile">Plans</span></a>
+        <a href="attire.html"><span class="desktop-label" id="attireNavAttire">Attire</span><span class="mobile-label" id="attireNavAttireMobile">Attire</span></a>
+        <a href="faq.html"><span class="desktop-label" id="attireNavFaq">FAQ</span><span class="mobile-label" id="attireNavFaqMobile">FAQ</span></a>
       </nav>
       <div class="header-actions">
         <button class="lang-toggle" id="attireLanguageToggle" type="button" aria-label="Switch language">ES</button>
@@ -87,8 +89,15 @@
         en: {
           brand: "Phillip & Luis",
           navHome: "Home",
+          navHomeMobile: "Home",
+          navHotels: "Stay",
+          navHotelsMobile: "Stay",
           navThings: "Things to Do",
+          navThingsMobile: "Plans",
           navAttire: "Attire",
+          navAttireMobile: "Attire",
+          navFaq: "FAQ",
+          navFaqMobile: "FAQ",
           rsvp: "RSVP",
           heroKicker: "What we mean by formal",
           heroTitle: "Attire Inspiration",
@@ -106,8 +115,15 @@
         es: {
           brand: "Phillip & Luis",
           navHome: "Inicio",
+          navHomeMobile: "Inicio",
+          navHotels: "Alojamiento",
+          navHotelsMobile: "Aloj.",
           navThings: "Cosas que hacer",
+          navThingsMobile: "Planes",
           navAttire: "Vestimenta",
+          navAttireMobile: "Vestir",
+          navFaq: "Preguntas",
+          navFaqMobile: "FAQ",
           rsvp: "RSVP",
           heroKicker: "Lo que queremos decir con etiqueta formal",
           heroTitle: "Inspiración de Vestimenta",
@@ -127,8 +143,15 @@
       const attireNodes = {
         brand: document.querySelector("#attireBrand"),
         navHome: document.querySelector("#attireNavHome"),
+        navHomeMobile: document.querySelector("#attireNavHomeMobile"),
+        navHotels: document.querySelector("#attireNavHotels"),
+        navHotelsMobile: document.querySelector("#attireNavHotelsMobile"),
         navThings: document.querySelector("#attireNavThings"),
+        navThingsMobile: document.querySelector("#attireNavThingsMobile"),
         navAttire: document.querySelector("#attireNavAttire"),
+        navAttireMobile: document.querySelector("#attireNavAttireMobile"),
+        navFaq: document.querySelector("#attireNavFaq"),
+        navFaqMobile: document.querySelector("#attireNavFaqMobile"),
         rsvp: document.querySelector("#attireRsvp"),
         heroKicker: document.querySelector("#attireHeroKicker"),
         heroTitle: document.querySelector("#attireHeroTitle"),
