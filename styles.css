@@ -72,6 +72,10 @@ a {
   border-bottom: 1px solid transparent;
 }
 
+.mobile-label {
+  display: none;
+}
+
 .desktop-nav a:hover,
 .text-link:hover {
   border-color: currentColor;
@@ -852,13 +856,30 @@ main,
     display: flex;
     grid-column: 1 / -1;
     order: 3;
-    overflow-x: auto;
-    justify-content: start;
-    padding-bottom: 0.15rem;
-    scrollbar-width: none;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.55rem 0.8rem;
+    padding-bottom: 0.25rem;
+    justify-content: stretch;
+    overflow: visible;
+    font-size: 0.62rem;
+    letter-spacing: 0.05em;
   }
 
-  .desktop-nav::-webkit-scrollbar {
+  .desktop-nav a {
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .desktop-label {
+    display: none;
+  }
+
+  .mobile-label {
+    display: inline;
+  }
+
+  .mobile-hidden-nav {
     display: none;
   }
 
