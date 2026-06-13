@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <title>Things to Do</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <img
+      class="floral floral-top"
+      src="https://images.zola.com/2f2a85e8-7ad9-4984-886c-dd6a19357088"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="floral floral-bottom"
+      src="https://images.zola.com/77ef4b64-973d-46e7-836f-13b0da264eaf"
+      alt=""
+      aria-hidden="true"
+    />
+
+    <header class="site-header">
+      <a class="brand" href="index.html" id="thingsBrand">Phillip & Luis</a>
+      <nav class="desktop-nav" aria-label="Things to do navigation">
+        <a href="index.html" id="thingsNavHome">Home</a>
+        <a href="things-to-do.html" id="thingsNavThings">Things to Do</a>
+        <a href="attire.html" id="thingsNavAttire">Attire</a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-toggle" id="thingsLanguageToggle" type="button" aria-label="Switch language">ES</button>
+        <a class="rsvp-link" href="rsvp.html" id="thingsRsvp">RSVP</a>
+      </div>
+    </header>
+
+    <main class="subpage-main">
+      <section class="subpage-hero">
+        <div class="subpage-hero-inner">
+          <p class="kicker" id="thingsHeroKicker">Around the wedding weekend</p>
+          <h1 id="thingsHeroTitle">Things to Do</h1>
+          <p id="thingsHeroBody">
+            If you'll be in Madrid for the weekend, we'd love for everyone to have a few chances to meet, explore, and
+            enjoy the city together.
+          </p>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="page-section-heading">
+          <p class="kicker" id="eventsKicker">Weekend plans</p>
+          <h2 id="eventsTitle">Wedding Weekend Events</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3 id="welcomeTitle">Welcome Drinks</h3>
+            <div class="feature-meta">
+              <span class="tag" id="welcomeWhen">Friday, around 7:00 PM</span>
+              <span class="tag" id="welcomeOptional">Optional</span>
+            </div>
+            <p id="welcomeBody">
+              The night before the wedding, we're planning a casual welcome drinks gathering at a bar so everyone can
+              meet, have a drink, and ease into the weekend together.
+            </p>
+            <p id="welcomeNote">
+              More details will be confirmed closer to the date. RSVPs may be required later, as space could be
+              limited.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3 id="tourTitle">Madrid Walking Tour</h3>
+            <div class="feature-meta">
+              <span class="tag" id="tourWhen">Saturday, around 12:00 PM</span>
+              <span class="tag" id="tourOptional">Optional</span>
+            </div>
+            <p id="tourBody">
+              We're hoping to organize a guided walking tour through central Madrid so guests can learn a bit of the
+              city's history, meet people from the wedding, and spend some relaxed time together.
+            </p>
+            <p id="tourNote">
+              More details will be confirmed closer to the date. RSVPs may be required later so we can keep track of
+              numbers.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="page-section-heading">
+          <p class="kicker" id="cityKicker">Classic Madrid</p>
+          <h2 id="cityTitle">A Few Favorite Stops</h2>
+        </div>
+        <div class="city-grid">
+          <article class="city-card">
+            <h3 id="retiroTitle">Retiro Park</h3>
+            <p id="retiroBody">
+              A beautiful place for a stroll, a coffee, or a quiet afternoon. If you have time, don't miss the lake
+              and the Crystal Palace.
+            </p>
+            <a class="button primary" href="https://en.wikipedia.org/wiki/Parque_del_Buen_Retiro%2C_Madrid" target="_blank" rel="noreferrer" id="retiroLink">Learn more</a>
+          </article>
+
+          <article class="city-card">
+            <h3 id="pradoTitle">Prado Museum</h3>
+            <p id="pradoBody">
+              If you'd like a classic Madrid museum visit, the Prado is one of the city's essentials and an easy choice
+              for a few hours.
+            </p>
+            <a class="button primary" href="https://www.museodelprado.es/en" target="_blank" rel="noreferrer" id="pradoLink">Visit site</a>
+          </article>
+
+          <article class="city-card">
+            <h3 id="palaceTitle">Royal Palace</h3>
+            <p id="palaceBody">
+              One of the city's most iconic landmarks, especially if you want to see grand architecture in the historic
+              center.
+            </p>
+            <a class="button primary" href="https://en.wikipedia.org/wiki/Royal_Palace_of_Madrid" target="_blank" rel="noreferrer" id="palaceLink">Learn more</a>
+          </article>
+
+          <article class="city-card">
+            <h3 id="debodTitle">Temple of Debod</h3>
+            <p id="debodBody">
+              A lovely stop, especially later in the day. The setting is peaceful and it's one of the nicest places in
+              Madrid for sunset views.
+            </p>
+            <a class="button primary" href="https://en.wikipedia.org/wiki/Temple_of_Debod" target="_blank" rel="noreferrer" id="debodLink">Learn more</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p id="thingsFooter">Phillip & Luis / Madrid Weekend</p>
+    </footer>
+
+    <script>
+      const thingsCopy = {
+        en: {
+          brand: "Phillip & Luis",
+          navHome: "Home",
+          navThings: "Things to Do",
+          navAttire: "Attire",
+          rsvp: "RSVP",
+          heroKicker: "Around the wedding weekend",
+          heroTitle: "Things to Do",
+          heroBody:
+            "If you'll be in Madrid for the weekend, we'd love for everyone to have a few chances to meet, explore, and enjoy the city together.",
+          eventsKicker: "Weekend plans",
+          eventsTitle: "Wedding Weekend Events",
+          welcomeTitle: "Welcome Drinks",
+          welcomeWhen: "Friday, around 7:00 PM",
+          welcomeOptional: "Optional",
+          welcomeBody:
+            "The night before the wedding, we're planning a casual welcome drinks gathering at a bar so everyone can meet, have a drink, and ease into the weekend together.",
+          welcomeNote:
+            "More details will be confirmed closer to the date. RSVPs may be required later, as space could be limited.",
+          tourTitle: "Madrid Walking Tour",
+          tourWhen: "Saturday, around 12:00 PM",
+          tourOptional: "Optional",
+          tourBody:
+            "We're hoping to organize a guided walking tour through central Madrid so guests can learn a bit of the city's history, meet people from the wedding, and spend some relaxed time together.",
+          tourNote:
+            "More details will be confirmed closer to the date. RSVPs may be required later so we can keep track of numbers.",
+          cityKicker: "Classic Madrid",
+          cityTitle: "A Few Favorite Stops",
+          retiroTitle: "Retiro Park",
+          retiroBody:
+            "A beautiful place for a stroll, a coffee, or a quiet afternoon. If you have time, don't miss the lake and the Crystal Palace.",
+          retiroLink: "Learn more",
+          pradoTitle: "Prado Museum",
+          pradoBody:
+            "If you'd like a classic Madrid museum visit, the Prado is one of the city's essentials and an easy choice for a few hours.",
+          pradoLink: "Visit site",
+          palaceTitle: "Royal Palace",
+          palaceBody:
+            "One of the city's most iconic landmarks, especially if you want to see grand architecture in the historic center.",
+          palaceLink: "Learn more",
+          debodTitle: "Temple of Debod",
+          debodBody:
+            "A lovely stop, especially later in the day. The setting is peaceful and it's one of the nicest places in Madrid for sunset views.",
+          debodLink: "Learn more",
+          footer: "Phillip & Luis / Madrid Weekend",
+        },
+        es: {
+          brand: "Phillip & Luis",
+          navHome: "Inicio",
+          navThings: "Cosas que hacer",
+          navAttire: "Vestimenta",
+          rsvp: "RSVP",
+          heroKicker: "Alrededor del fin de semana de la boda",
+          heroTitle: "Cosas que hacer",
+          heroBody:
+            "Si vais a estar en Madrid ese fin de semana, nos encantará que haya varios momentos para vernos, explorar la ciudad y disfrutarla juntos.",
+          eventsKicker: "Planes del fin de semana",
+          eventsTitle: "Eventos del Fin de Semana",
+          welcomeTitle: "Welcome Drinks",
+          welcomeWhen: "Viernes, sobre las 19:00",
+          welcomeOptional: "Opcional",
+          welcomeBody:
+            "La noche antes de la boda, queremos organizar un encuentro informal en un bar para tomar algo, conocernos mejor y empezar el fin de semana con calma.",
+          welcomeNote:
+            "Confirmaremos más detalles más adelante. Puede que el RSVP sea necesario más adelante, ya que el espacio podría ser limitado.",
+          tourTitle: "Madrid Walking Tour",
+          tourWhen: "Sábado, sobre las 12:00",
+          tourOptional: "Opcional",
+          tourBody:
+            "Nos gustaría organizar un paseo guiado por el centro de Madrid para que los invitados conozcan un poco mejor la historia de la ciudad, coincidan con más gente de la boda y pasen un rato juntos.",
+          tourNote:
+            "Confirmaremos más detalles más adelante. Puede que el RSVP sea necesario más adelante para llevar mejor la cuenta.",
+          cityKicker: "Madrid clásico",
+          cityTitle: "Algunas Paradas Favoritas",
+          retiroTitle: "Parque del Retiro",
+          retiroBody:
+            "Un sitio precioso para pasear, tomar un café o pasar una tarde tranquila. Si tenéis tiempo, no os perdáis el lago y el Palacio de Cristal.",
+          retiroLink: "Más información",
+          pradoTitle: "Museo del Prado",
+          pradoBody:
+            "Si os apetece una visita clásica de museo en Madrid, el Prado es una apuesta segura y uno de los imprescindibles de la ciudad.",
+          pradoLink: "Visitar web",
+          palaceTitle: "Palacio Real",
+          palaceBody:
+            "Uno de los lugares más emblemáticos de Madrid, sobre todo si os apetece ver arquitectura monumental en pleno centro histórico.",
+          palaceLink: "Más información",
+          debodTitle: "Templo de Debod",
+          debodBody:
+            "Una visita muy agradable, especialmente al final del día. El entorno es tranquilo y es uno de los sitios más bonitos de Madrid para ver el atardecer.",
+          debodLink: "Más información",
+          footer: "Phillip & Luis / Fin de Semana en Madrid",
+        },
+      };
+
+      const thingsNodes = {
+        brand: document.querySelector("#thingsBrand"),
+        navHome: document.querySelector("#thingsNavHome"),
+        navThings: document.querySelector("#thingsNavThings"),
+        navAttire: document.querySelector("#thingsNavAttire"),
+        rsvp: document.querySelector("#thingsRsvp"),
+        heroKicker: document.querySelector("#thingsHeroKicker"),
+        heroTitle: document.querySelector("#thingsHeroTitle"),
+        heroBody: document.querySelector("#thingsHeroBody"),
+        eventsKicker: document.querySelector("#eventsKicker"),
+        eventsTitle: document.querySelector("#eventsTitle"),
+        welcomeTitle: document.querySelector("#welcomeTitle"),
+        welcomeWhen: document.querySelector("#welcomeWhen"),
+        welcomeOptional: document.querySelector("#welcomeOptional"),
+        welcomeBody: document.querySelector("#welcomeBody"),
+        welcomeNote: document.querySelector("#welcomeNote"),
+        tourTitle: document.querySelector("#tourTitle"),
+        tourWhen: document.querySelector("#tourWhen"),
+        tourOptional: document.querySelector("#tourOptional"),
+        tourBody: document.querySelector("#tourBody"),
+        tourNote: document.querySelector("#tourNote"),
+        cityKicker: document.querySelector("#cityKicker"),
+        cityTitle: document.querySelector("#cityTitle"),
+        retiroTitle: document.querySelector("#retiroTitle"),
+        retiroBody: document.querySelector("#retiroBody"),
+        retiroLink: document.querySelector("#retiroLink"),
+        pradoTitle: document.querySelector("#pradoTitle"),
+        pradoBody: document.querySelector("#pradoBody"),
+        pradoLink: document.querySelector("#pradoLink"),
+        palaceTitle: document.querySelector("#palaceTitle"),
+        palaceBody: document.querySelector("#palaceBody"),
+        palaceLink: document.querySelector("#palaceLink"),
+        debodTitle: document.querySelector("#debodTitle"),
+        debodBody: document.querySelector("#debodBody"),
+        debodLink: document.querySelector("#debodLink"),
+        footer: document.querySelector("#thingsFooter"),
+        toggle: document.querySelector("#thingsLanguageToggle"),
+      };
+
+      let language = localStorage.getItem("wedding-language") || "en";
+
+      function renderThings(nextLanguage) {
+        language = nextLanguage;
+        localStorage.setItem("wedding-language", nextLanguage);
+        document.documentElement.lang = nextLanguage;
+        const copy = thingsCopy[nextLanguage];
+
+        Object.entries(thingsNodes).forEach(([key, node]) => {
+          if (!node || key === "toggle") return;
+          node.textContent = copy[key];
+        });
+
+        thingsNodes.toggle.textContent = nextLanguage === "en" ? "ES" : "EN";
+      }
+
+      thingsNodes.toggle.addEventListener("click", () => {
+        renderThings(language === "en" ? "es" : "en");
+      });
+
+      renderThings(language);
+    </script>
+  </body>
+</html>

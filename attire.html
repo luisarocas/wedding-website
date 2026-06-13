@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <title>Attire Inspiration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <img
+      class="floral floral-top"
+      src="https://images.zola.com/2f2a85e8-7ad9-4984-886c-dd6a19357088"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="floral floral-bottom"
+      src="https://images.zola.com/77ef4b64-973d-46e7-836f-13b0da264eaf"
+      alt=""
+      aria-hidden="true"
+    />
+
+    <header class="site-header">
+      <a class="brand" href="index.html" id="attireBrand">Phillip & Luis</a>
+      <nav class="desktop-nav" aria-label="Attire navigation">
+        <a href="index.html" id="attireNavHome">Home</a>
+        <a href="things-to-do.html" id="attireNavThings">Things to Do</a>
+        <a href="attire.html" id="attireNavAttire">Attire</a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-toggle" id="attireLanguageToggle" type="button" aria-label="Switch language">ES</button>
+        <a class="rsvp-link" href="rsvp.html" id="attireRsvp">RSVP</a>
+      </div>
+    </header>
+
+    <main class="subpage-main">
+      <section class="subpage-hero">
+        <div class="subpage-hero-inner">
+          <p class="kicker" id="attireHeroKicker">What we mean by formal</p>
+          <h1 id="attireHeroTitle">Attire Inspiration</h1>
+          <p id="attireHeroBody">
+            We wanted to share a few examples to give a better sense of the feel for the celebration.
+          </p>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="attire-layout">
+          <article class="attire-copy">
+            <p class="kicker" id="attireCopyKicker">Dress code</p>
+            <h2 id="attireCopyTitle">Formal Attire</h2>
+            <p id="attireCopyBody">
+              We invite our guests to dress in formal attire for the celebration. Gentlemen are encouraged to wear a
+              suit and tie, ideally in darker tones. Ladies may choose a formal dress or an elegant tailored set.
+              Dresses may be midi to floor length.
+            </p>
+            <p id="attireCopyBodyTwo">
+              These images are meant to show the overall tone: polished, celebratory, and elegant, while still feeling
+              relaxed enough for a spring evening in Spain.
+            </p>
+          </article>
+
+          <div class="attire-gallery">
+            <figure class="gallery-card">
+              <img src="2b35bc28-5117-4b1f-87b3-7935b3620266.png" alt="Formal wedding guest attire inspiration" />
+              <figcaption id="attireCaptionOne">Long silhouettes, dressy evening styling, and a polished formal feel.</figcaption>
+            </figure>
+            <figure class="gallery-card">
+              <img src="2eac3453-b5c2-4429-b6ae-94efe31e5751.png" alt="Additional formal wedding guest attire inspiration" />
+              <figcaption id="attireCaptionTwo">Elegant dresses and darker suits that still feel warm and festive.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p id="attireFooter">Phillip & Luis / Attire Inspiration</p>
+    </footer>
+
+    <script>
+      const attireCopy = {
+        en: {
+          brand: "Phillip & Luis",
+          navHome: "Home",
+          navThings: "Things to Do",
+          navAttire: "Attire",
+          rsvp: "RSVP",
+          heroKicker: "What we mean by formal",
+          heroTitle: "Attire Inspiration",
+          heroBody: "We wanted to share a few examples to give a better sense of the feel for the celebration.",
+          copyKicker: "Dress code",
+          copyTitle: "Formal Attire",
+          copyBody:
+            "We invite our guests to dress in formal attire for the celebration. Gentlemen are encouraged to wear a suit and tie, ideally in darker tones. Ladies may choose a formal dress or an elegant tailored set. Dresses may be midi to floor length.",
+          copyBodyTwo:
+            "These images are meant to show the overall tone: polished, celebratory, and elegant, while still feeling relaxed enough for a spring evening in Spain.",
+          captionOne: "Long silhouettes, dressy evening styling, and a polished formal feel.",
+          captionTwo: "Elegant dresses and darker suits that still feel warm and festive.",
+          footer: "Phillip & Luis / Attire Inspiration",
+        },
+        es: {
+          brand: "Phillip & Luis",
+          navHome: "Inicio",
+          navThings: "Cosas que hacer",
+          navAttire: "Vestimenta",
+          rsvp: "RSVP",
+          heroKicker: "Lo que queremos decir con etiqueta formal",
+          heroTitle: "Inspiración de Vestimenta",
+          heroBody: "Queríamos compartir algunos ejemplos para que sea más fácil imaginar el estilo de la celebración.",
+          copyKicker: "Código de vestimenta",
+          copyTitle: "Etiqueta Formal",
+          copyBody:
+            "Os invitamos a vestir de etiqueta formal para la celebración. Los caballeros pueden llevar traje y corbata, idealmente en tonos oscuros. Las mujeres pueden elegir un vestido formal o un conjunto elegante. Los vestidos pueden ser midi o largos.",
+          copyBodyTwo:
+            "Estas imágenes sirven sobre todo para enseñar el ambiente general: elegante, arreglado y festivo, pero adecuado para una tarde de primavera en España.",
+          captionOne: "Siluetas largas, un estilo de noche arreglado y un aire formal cuidado.",
+          captionTwo: "Vestidos elegantes y trajes oscuros con un aire cálido y festivo.",
+          footer: "Phillip & Luis / Inspiración de Vestimenta",
+        },
+      };
+
+      const attireNodes = {
+        brand: document.querySelector("#attireBrand"),
+        navHome: document.querySelector("#attireNavHome"),
+        navThings: document.querySelector("#attireNavThings"),
+        navAttire: document.querySelector("#attireNavAttire"),
+        rsvp: document.querySelector("#attireRsvp"),
+        heroKicker: document.querySelector("#attireHeroKicker"),
+        heroTitle: document.querySelector("#attireHeroTitle"),
+        heroBody: document.querySelector("#attireHeroBody"),
+        copyKicker: document.querySelector("#attireCopyKicker"),
+        copyTitle: document.querySelector("#attireCopyTitle"),
+        copyBody: document.querySelector("#attireCopyBody"),
+        copyBodyTwo: document.querySelector("#attireCopyBodyTwo"),
+        captionOne: document.querySelector("#attireCaptionOne"),
+        captionTwo: document.querySelector("#attireCaptionTwo"),
+        footer: document.querySelector("#attireFooter"),
+        toggle: document.querySelector("#attireLanguageToggle"),
+      };
+
+      let language = localStorage.getItem("wedding-language") || "en";
+
+      function renderAttire(nextLanguage) {
+        language = nextLanguage;
+        localStorage.setItem("wedding-language", nextLanguage);
+        document.documentElement.lang = nextLanguage;
+        const copy = attireCopy[nextLanguage];
+
+        Object.entries(attireNodes).forEach(([key, node]) => {
+          if (!node || key === "toggle") return;
+          node.textContent = copy[key];
+        });
+
+        attireNodes.toggle.textContent = nextLanguage === "en" ? "ES" : "EN";
+      }
+
+      attireNodes.toggle.addEventListener("click", () => {
+        renderAttire(language === "en" ? "es" : "en");
+      });
+
+      renderAttire(language);
+    </script>
+  </body>
+</html>
