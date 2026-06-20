@@ -18,7 +18,7 @@
       <a class="brand" href="index.html" id="faqBrand">Phillip & Luis</a>
       <nav class="desktop-nav" aria-label="FAQ navigation">
         <a href="index.html"><span class="desktop-label" id="faqNavHome">Home</span><span class="mobile-label" id="faqNavHomeMobile">Home</span></a>
-        <a href="index.html#hotels"><span class="desktop-label" id="faqNavHotels">Stay</span><span class="mobile-label" id="faqNavHotelsMobile">Stay</span></a>
+        <a href="big-day.html"><span class="desktop-label" id="faqNavBigDay">The Big Day</span><span class="mobile-label" id="faqNavBigDayMobile">Big Day</span></a>
         <a href="things-to-do.html"><span class="desktop-label" id="faqNavThings">Things to Do</span><span class="mobile-label" id="faqNavThingsMobile">Plans</span></a>
         <a href="attire.html"><span class="desktop-label" id="faqNavAttire">Attire</span><span class="mobile-label" id="faqNavAttireMobile">Attire</span></a>
         <a href="faq.html"><span class="desktop-label" id="faqNavFaq">FAQ</span><span class="mobile-label" id="faqNavFaqMobile">FAQ</span></a>
@@ -47,7 +47,7 @@
           <details open>
             <summary id="faqTwoQ">What is the dress code?</summary>
             <p>
-              <span id="faqTwoA">We invite our guests to dress in formal attire for the celebration. Gentlemen are encouraged to wear a suit and tie, ideally in darker tones. Ladies may choose a formal dress or an elegant tailored set. Dresses may be midi to floor length.</span>
+              <span id="faqTwoA">We invite our guests to dress in formal attire for the celebration. Gentlemen are encouraged to wear a suit and tie. Suit should ideally be in darker tones, and tie can be colorful. Ladies may choose long dresses in flowing fabrics like chiffon, silk, and tulle. Color is highly encouraged! We kindly ask guests to refrain from wearing white.</span>
               <a class="text-link" href="attire.html" id="faqTwoLink">If you'd like a few examples, you can view attire inspiration here.</a>
             </p>
           </details>
@@ -57,7 +57,7 @@
           </details>
           <details open>
             <summary id="faqFourQ">When should we book our flights to Madrid?</summary>
-            <p id="faqFourA">We recommend booking 6-9 months in advance for the best prices and availability. If you've received a Save the Date, you can feel comfortable making travel plans.</p>
+            <p id="faqFourA">We recommend booking 6-9 months in advance for the best prices and availability.</p>
           </details>
           <details open>
             <summary id="faqFiveQ">What if I cannot attend?</summary>
@@ -77,6 +77,18 @@
           </details>
         </div>
       </section>
+
+      <section class="page-section countdown-section">
+        <div class="page-section-heading">
+          <p class="kicker" id="faqCountdownKicker">Counting down</p>
+          <h2 id="faqCountdownTitle">See you soon</h2>
+        </div>
+        <div class="countdown countdown-static" aria-label="Countdown to wedding">
+          <span><strong id="faqDays">000</strong><small id="faqDaysLabel">days</small></span>
+          <span><strong id="faqHours">00</strong><small id="faqHoursLabel">hours</small></span>
+          <span><strong id="faqMinutes">00</strong><small id="faqMinutesLabel">minutes</small></span>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -84,13 +96,14 @@
     </footer>
 
     <script>
+      const WEDDING_DATE = "2027-05-30T17:00:00+02:00";
       const faqCopy = {
         en: {
           brand: "Phillip & Luis",
           navHome: "Home",
           navHomeMobile: "Home",
-          navHotels: "Stay",
-          navHotelsMobile: "Stay",
+          navBigDay: "The Big Day",
+          navBigDayMobile: "Big Day",
           navThings: "Things to Do",
           navThingsMobile: "Plans",
           navAttire: "Attire",
@@ -104,12 +117,12 @@
           faqOneQ: "When should I RSVP?",
           faqOneA: "RSVPs will open in August 2026. The deadline to respond will be February 2027. We encourage you to reply as soon as possible once RSVPs open to help us with planning.",
           faqTwoQ: "What is the dress code?",
-          faqTwoA: "We invite our guests to dress in formal attire for the celebration. Gentlemen are encouraged to wear a suit and tie, ideally in darker tones. Ladies may choose a formal dress or an elegant tailored set. Dresses may be midi to floor length.",
+          faqTwoA: "We invite our guests to dress in formal attire for the celebration. Gentlemen are encouraged to wear a suit and tie. Suit should ideally be in darker tones, and tie can be colorful. Ladies may choose long dresses in flowing fabrics like chiffon, silk, and tulle. Color is highly encouraged! We kindly ask guests to refrain from wearing white.",
           faqTwoLink: "If you'd like a few examples, you can view attire inspiration here.",
           faqThreeQ: "Will transportation be provided?",
           faqThreeA: "Yes. Transportation will be provided to the venue and back at the end of the night. Details and timing will be shared closer to the date.",
           faqFourQ: "When should we book our flights to Madrid?",
-          faqFourA: "We recommend booking 6-9 months in advance for the best prices and availability. If you've received a Save the Date, you can feel comfortable making travel plans.",
+          faqFourA: "We recommend booking 6-9 months in advance for the best prices and availability.",
           faqFiveQ: "What if I cannot attend?",
           faqFiveA: "We completely understand that international travel isn't possible for everyone. We're planning a separate celebration in Chicago, date to be determined, for those who can't join us in Spain, but please know we're grateful for your love and support in any form.",
           faqSixQ: "When should I arrive?",
@@ -118,14 +131,19 @@
           faqSevenA: "The ceremony will be held outdoors, weather permitting, followed by an indoor reception. Please plan accordingly.",
           faqEightQ: "Special dietary needs?",
           faqEightA: "Please indicate any dietary restrictions when you RSVP, and we will do our best to accommodate you.",
+          countdownKicker: "Counting down",
+          countdownTitle: "See you soon",
+          days: "days",
+          hours: "hours",
+          minutes: "minutes",
           footer: "Phillip & Luis / FAQ",
         },
         es: {
           brand: "Phillip & Luis",
           navHome: "Inicio",
           navHomeMobile: "Inicio",
-          navHotels: "Alojamiento",
-          navHotelsMobile: "Aloj.",
+          navBigDay: "El gran día",
+          navBigDayMobile: "Gran día",
           navThings: "Cosas que hacer",
           navThingsMobile: "Planes",
           navAttire: "Vestimenta",
@@ -139,7 +157,7 @@
           faqOneQ: "¿Cuándo debemos confirmar asistencia?",
           faqOneA: "Las confirmaciones se abrirán en agosto de 2026. La fecha límite para responder será en febrero de 2027. Os animamos a confirmar cuanto antes para ayudarnos con la organización.",
           faqTwoQ: "¿Cuál es el código de vestimenta?",
-          faqTwoA: "Os invitamos a vestir de etiqueta formal para la celebración. Los caballeros pueden llevar traje y corbata, idealmente en tonos oscuros. Las mujeres pueden elegir un vestido formal o un conjunto elegante. Los vestidos pueden ser midi o largos.",
+          faqTwoA: "Os invitamos a vestir de etiqueta formal para la celebración. Los caballeros pueden llevar traje y corbata. El traje idealmente en tonos oscuros, y la corbata puede aportar color. Las mujeres pueden elegir vestidos largos en tejidos fluidos como gasa, seda o tul. El color es más que bienvenido. Os pedimos, por favor, evitar el blanco.",
           faqTwoLink: "Si queréis ver algunos ejemplos, podéis consultar la inspiración de vestimenta aquí.",
           faqThreeQ: "¿Habrá transporte?",
           faqThreeA: "Sí. Habrá transporte al lugar de la boda y de regreso al final de la noche. Compartiremos los detalles y horarios más cerca de la fecha.",
@@ -153,6 +171,11 @@
           faqSevenA: "La ceremonia será al aire libre, si el clima lo permite, seguida de una recepción en interior. Por favor, planificad en consecuencia.",
           faqEightQ: "¿Necesidades alimentarias especiales?",
           faqEightA: "Indicad cualquier restricción alimentaria al confirmar vuestra asistencia, e intentaremos acomodarla.",
+          countdownKicker: "Cuenta atrás",
+          countdownTitle: "Nos vemos pronto",
+          days: "días",
+          hours: "horas",
+          minutes: "minutos",
           footer: "Phillip & Luis / Preguntas",
         },
       };
@@ -161,8 +184,8 @@
         brand: document.querySelector("#faqBrand"),
         navHome: document.querySelector("#faqNavHome"),
         navHomeMobile: document.querySelector("#faqNavHomeMobile"),
-        navHotels: document.querySelector("#faqNavHotels"),
-        navHotelsMobile: document.querySelector("#faqNavHotelsMobile"),
+        navBigDay: document.querySelector("#faqNavBigDay"),
+        navBigDayMobile: document.querySelector("#faqNavBigDayMobile"),
         navThings: document.querySelector("#faqNavThings"),
         navThingsMobile: document.querySelector("#faqNavThingsMobile"),
         navAttire: document.querySelector("#faqNavAttire"),
@@ -190,6 +213,11 @@
         faqSevenA: document.querySelector("#faqSevenA"),
         faqEightQ: document.querySelector("#faqEightQ"),
         faqEightA: document.querySelector("#faqEightA"),
+        countdownKicker: document.querySelector("#faqCountdownKicker"),
+        countdownTitle: document.querySelector("#faqCountdownTitle"),
+        days: document.querySelector("#faqDaysLabel"),
+        hours: document.querySelector("#faqHoursLabel"),
+        minutes: document.querySelector("#faqMinutesLabel"),
         footer: document.querySelector("#faqFooter"),
         toggle: document.querySelector("#faqLanguageToggle"),
       };
@@ -210,11 +238,24 @@
         faqNodes.toggle.textContent = nextLanguage === "en" ? "ES" : "EN";
       }
 
+      function updateCountdown() {
+        const diff = new Date(WEDDING_DATE).getTime() - Date.now();
+        const remaining = Math.max(diff, 0);
+        const days = Math.floor(remaining / 86400000);
+        const hours = Math.floor((remaining % 86400000) / 3600000);
+        const minutes = Math.floor((remaining % 3600000) / 60000);
+        document.querySelector("#faqDays").textContent = String(days).padStart(3, "0");
+        document.querySelector("#faqHours").textContent = String(hours).padStart(2, "0");
+        document.querySelector("#faqMinutes").textContent = String(minutes).padStart(2, "0");
+      }
+
       faqNodes.toggle.addEventListener("click", () => {
         renderFaq(language === "en" ? "es" : "en");
       });
 
       renderFaq(language);
+      updateCountdown();
+      setInterval(updateCountdown, 60000);
     </script>
   </body>
 </html>
