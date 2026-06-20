@@ -60,17 +60,6 @@
         </div>
       </section>
 
-      <section class="page-section countdown-section">
-        <div class="page-section-heading">
-          <p class="kicker" id="attireCountdownKicker">Counting down</p>
-          <h2 id="attireCountdownTitle">See you soon</h2>
-        </div>
-        <div class="countdown countdown-static" aria-label="Countdown to wedding">
-          <span><strong id="attireDays">000</strong><small id="attireDaysLabel">days</small></span>
-          <span><strong id="attireHours">00</strong><small id="attireHoursLabel">hours</small></span>
-          <span><strong id="attireMinutes">00</strong><small id="attireMinutesLabel">minutes</small></span>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
@@ -78,7 +67,6 @@
     </footer>
 
     <script>
-      const WEDDING_DATE = "2027-05-30T17:00:00+02:00";
       const attireCopy = {
         en: {
           brand: "Phillip & Luis",
@@ -102,11 +90,6 @@
           copyBodyTwo: "These images are meant to show the overall tone: polished, celebratory, elegant, and festive.",
           captionOne: "Long silhouettes, dressy evening styling, and a polished formal feel.",
           captionTwo: "Elegant dresses and darker suits that still feel warm and festive.",
-          countdownKicker: "Counting down",
-          countdownTitle: "See you soon",
-          days: "days",
-          hours: "hours",
-          minutes: "minutes",
           footer: "Phillip & Luis / Attire Inspiration",
         },
         es: {
@@ -131,11 +114,6 @@
           copyBodyTwo: "Estas imágenes sirven sobre todo para enseñar el ambiente general: elegante, arreglado y festivo.",
           captionOne: "Siluetas largas, un estilo de noche arreglado y un aire formal cuidado.",
           captionTwo: "Vestidos elegantes y trajes oscuros con un aire cálido y festivo.",
-          countdownKicker: "Cuenta atrás",
-          countdownTitle: "Nos vemos pronto",
-          days: "días",
-          hours: "horas",
-          minutes: "minutos",
           footer: "Phillip & Luis / Inspiración de vestimenta",
         },
       };
@@ -162,11 +140,6 @@
         copyBodyTwo: document.querySelector("#attireCopyBodyTwo"),
         captionOne: document.querySelector("#attireCaptionOne"),
         captionTwo: document.querySelector("#attireCaptionTwo"),
-        countdownKicker: document.querySelector("#attireCountdownKicker"),
-        countdownTitle: document.querySelector("#attireCountdownTitle"),
-        days: document.querySelector("#attireDaysLabel"),
-        hours: document.querySelector("#attireHoursLabel"),
-        minutes: document.querySelector("#attireMinutesLabel"),
         footer: document.querySelector("#attireFooter"),
         toggle: document.querySelector("#attireLanguageToggle"),
       };
@@ -186,25 +159,11 @@
 
         attireNodes.toggle.textContent = nextLanguage === "en" ? "ES" : "EN";
       }
-
-      function updateCountdown() {
-        const diff = new Date(WEDDING_DATE).getTime() - Date.now();
-        const remaining = Math.max(diff, 0);
-        const days = Math.floor(remaining / 86400000);
-        const hours = Math.floor((remaining % 86400000) / 3600000);
-        const minutes = Math.floor((remaining % 3600000) / 60000);
-        document.querySelector("#attireDays").textContent = String(days).padStart(3, "0");
-        document.querySelector("#attireHours").textContent = String(hours).padStart(2, "0");
-        document.querySelector("#attireMinutes").textContent = String(minutes).padStart(2, "0");
-      }
-
       attireNodes.toggle.addEventListener("click", () => {
         renderAttire(language === "en" ? "es" : "en");
       });
 
       renderAttire(language);
-      updateCountdown();
-      setInterval(updateCountdown, 60000);
     </script>
   </body>
 </html>

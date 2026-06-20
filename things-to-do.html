@@ -100,17 +100,6 @@
         </div>
       </section>
 
-      <section class="page-section countdown-section">
-        <div class="page-section-heading">
-          <p class="kicker" id="thingsCountdownKicker">Counting down</p>
-          <h2 id="thingsCountdownTitle">See you soon</h2>
-        </div>
-        <div class="countdown countdown-static" aria-label="Countdown to wedding">
-          <span><strong id="thingsDays">000</strong><small id="thingsDaysLabel">days</small></span>
-          <span><strong id="thingsHours">00</strong><small id="thingsHoursLabel">hours</small></span>
-          <span><strong id="thingsMinutes">00</strong><small id="thingsMinutesLabel">minutes</small></span>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
@@ -118,7 +107,6 @@
     </footer>
 
     <script>
-      const WEDDING_DATE = "2027-05-30T17:00:00+02:00";
       const thingsCopy = {
         en: {
           brand: "Phillip & Luis",
@@ -162,11 +150,6 @@
           debodTitle: "Temple of Debod",
           debodBody: "A lovely stop, especially later in the day. The setting is peaceful and it's one of the nicest places in Madrid for sunset views.",
           debodLink: "Learn more",
-          countdownKicker: "Counting down",
-          countdownTitle: "See you soon",
-          days: "days",
-          hours: "hours",
-          minutes: "minutes",
           footer: "Phillip & Luis / Madrid Weekend",
         },
         es: {
@@ -211,11 +194,6 @@
           debodTitle: "Templo de Debod",
           debodBody: "Una visita muy agradable, especialmente al final del día. El entorno es tranquilo y es uno de los sitios más bonitos de Madrid para ver el atardecer.",
           debodLink: "Más información",
-          countdownKicker: "Cuenta atrás",
-          countdownTitle: "Nos vemos pronto",
-          days: "días",
-          hours: "horas",
-          minutes: "minutos",
           footer: "Phillip & Luis / Fin de Semana en Madrid",
         },
       };
@@ -262,11 +240,6 @@
         debodTitle: document.querySelector("#debodTitle"),
         debodBody: document.querySelector("#debodBody"),
         debodLink: document.querySelector("#debodLink"),
-        countdownKicker: document.querySelector("#thingsCountdownKicker"),
-        countdownTitle: document.querySelector("#thingsCountdownTitle"),
-        days: document.querySelector("#thingsDaysLabel"),
-        hours: document.querySelector("#thingsHoursLabel"),
-        minutes: document.querySelector("#thingsMinutesLabel"),
         footer: document.querySelector("#thingsFooter"),
         toggle: document.querySelector("#thingsLanguageToggle"),
       };
@@ -286,25 +259,11 @@
 
         thingsNodes.toggle.textContent = nextLanguage === "en" ? "ES" : "EN";
       }
-
-      function updateCountdown() {
-        const diff = new Date(WEDDING_DATE).getTime() - Date.now();
-        const remaining = Math.max(diff, 0);
-        const days = Math.floor(remaining / 86400000);
-        const hours = Math.floor((remaining % 86400000) / 3600000);
-        const minutes = Math.floor((remaining % 3600000) / 60000);
-        document.querySelector("#thingsDays").textContent = String(days).padStart(3, "0");
-        document.querySelector("#thingsHours").textContent = String(hours).padStart(2, "0");
-        document.querySelector("#thingsMinutes").textContent = String(minutes).padStart(2, "0");
-      }
-
       thingsNodes.toggle.addEventListener("click", () => {
         renderThings(language === "en" ? "es" : "en");
       });
 
       renderThings(language);
-      updateCountdown();
-      setInterval(updateCountdown, 60000);
     </script>
   </body>
 </html>

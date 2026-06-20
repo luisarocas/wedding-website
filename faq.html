@@ -78,17 +78,6 @@
         </div>
       </section>
 
-      <section class="page-section countdown-section">
-        <div class="page-section-heading">
-          <p class="kicker" id="faqCountdownKicker">Counting down</p>
-          <h2 id="faqCountdownTitle">See you soon</h2>
-        </div>
-        <div class="countdown countdown-static" aria-label="Countdown to wedding">
-          <span><strong id="faqDays">000</strong><small id="faqDaysLabel">days</small></span>
-          <span><strong id="faqHours">00</strong><small id="faqHoursLabel">hours</small></span>
-          <span><strong id="faqMinutes">00</strong><small id="faqMinutesLabel">minutes</small></span>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
@@ -96,7 +85,6 @@
     </footer>
 
     <script>
-      const WEDDING_DATE = "2027-05-30T17:00:00+02:00";
       const faqCopy = {
         en: {
           brand: "Phillip & Luis",
@@ -131,11 +119,6 @@
           faqSevenA: "The ceremony will be held outdoors, weather permitting, followed by an indoor reception. Please plan accordingly.",
           faqEightQ: "Special dietary needs?",
           faqEightA: "Please indicate any dietary restrictions when you RSVP, and we will do our best to accommodate you.",
-          countdownKicker: "Counting down",
-          countdownTitle: "See you soon",
-          days: "days",
-          hours: "hours",
-          minutes: "minutes",
           footer: "Phillip & Luis / FAQ",
         },
         es: {
@@ -171,11 +154,6 @@
           faqSevenA: "La ceremonia será al aire libre, si el clima lo permite, seguida de una recepción en interior. Por favor, planificad en consecuencia.",
           faqEightQ: "¿Necesidades alimentarias especiales?",
           faqEightA: "Indicad cualquier restricción alimentaria al confirmar vuestra asistencia, e intentaremos acomodarla.",
-          countdownKicker: "Cuenta atrás",
-          countdownTitle: "Nos vemos pronto",
-          days: "días",
-          hours: "horas",
-          minutes: "minutos",
           footer: "Phillip & Luis / Preguntas",
         },
       };
@@ -213,11 +191,6 @@
         faqSevenA: document.querySelector("#faqSevenA"),
         faqEightQ: document.querySelector("#faqEightQ"),
         faqEightA: document.querySelector("#faqEightA"),
-        countdownKicker: document.querySelector("#faqCountdownKicker"),
-        countdownTitle: document.querySelector("#faqCountdownTitle"),
-        days: document.querySelector("#faqDaysLabel"),
-        hours: document.querySelector("#faqHoursLabel"),
-        minutes: document.querySelector("#faqMinutesLabel"),
         footer: document.querySelector("#faqFooter"),
         toggle: document.querySelector("#faqLanguageToggle"),
       };
@@ -237,25 +210,11 @@
 
         faqNodes.toggle.textContent = nextLanguage === "en" ? "ES" : "EN";
       }
-
-      function updateCountdown() {
-        const diff = new Date(WEDDING_DATE).getTime() - Date.now();
-        const remaining = Math.max(diff, 0);
-        const days = Math.floor(remaining / 86400000);
-        const hours = Math.floor((remaining % 86400000) / 3600000);
-        const minutes = Math.floor((remaining % 3600000) / 60000);
-        document.querySelector("#faqDays").textContent = String(days).padStart(3, "0");
-        document.querySelector("#faqHours").textContent = String(hours).padStart(2, "0");
-        document.querySelector("#faqMinutes").textContent = String(minutes).padStart(2, "0");
-      }
-
       faqNodes.toggle.addEventListener("click", () => {
         renderFaq(language === "en" ? "es" : "en");
       });
 
       renderFaq(language);
-      updateCountdown();
-      setInterval(updateCountdown, 60000);
     </script>
   </body>
 </html>

@@ -26,21 +26,9 @@
         </div>
       </section>
 
-      <section class="page-section countdown-section notice-countdown">
-        <div class="page-section-heading">
-          <p class="kicker" id="noticeCountdownKicker">Counting down</p>
-          <h2 id="noticeCountdownTitle">See you soon</h2>
-        </div>
-        <div class="countdown countdown-static" aria-label="Countdown to wedding">
-          <span><strong id="noticeDays">000</strong><small id="noticeDaysLabel">days</small></span>
-          <span><strong id="noticeHours">00</strong><small id="noticeHoursLabel">hours</small></span>
-          <span><strong id="noticeMinutes">00</strong><small id="noticeMinutesLabel">minutes</small></span>
-        </div>
-      </section>
     </main>
 
     <script>
-      const WEDDING_DATE = "2027-05-30T17:00:00+02:00";
       const noticeCopy = {
         en: {
           kicker: "Thank you for checking",
@@ -48,11 +36,6 @@
           body: "RSVPs for our celebration in Spain will open in August 2026 and close in February 2027.",
           bodyTwo: "Please check back then. We cannot wait to celebrate with you.",
           home: "Back to website",
-          countdownKicker: "Counting down",
-          countdownTitle: "See you soon",
-          days: "days",
-          hours: "hours",
-          minutes: "minutes",
           toggle: "ES",
           lang: "en",
         },
@@ -62,11 +45,6 @@
           body: "Las confirmaciones se abrirán en agosto de 2026 y cerrarán en febrero de 2027.",
           bodyTwo: "Volved a comprobarlo entonces. Tenemos muchas ganas de celebrarlo con vosotros.",
           home: "Volver a la web",
-          countdownKicker: "Cuenta atrás",
-          countdownTitle: "Nos vemos pronto",
-          days: "días",
-          hours: "horas",
-          minutes: "minutos",
           toggle: "EN",
           lang: "es",
         },
@@ -78,11 +56,6 @@
         body: document.querySelector("#noticeBody"),
         bodyTwo: document.querySelector("#noticeBodyTwo"),
         home: document.querySelector("#noticeHome"),
-        countdownKicker: document.querySelector("#noticeCountdownKicker"),
-        countdownTitle: document.querySelector("#noticeCountdownTitle"),
-        days: document.querySelector("#noticeDaysLabel"),
-        hours: document.querySelector("#noticeHoursLabel"),
-        minutes: document.querySelector("#noticeMinutesLabel"),
         toggle: document.querySelector("#noticeLanguageToggle"),
       };
 
@@ -99,25 +72,11 @@
         });
         noticeNodes.toggle.textContent = copy.toggle;
       }
-
-      function updateCountdown() {
-        const diff = new Date(WEDDING_DATE).getTime() - Date.now();
-        const remaining = Math.max(diff, 0);
-        const days = Math.floor(remaining / 86400000);
-        const hours = Math.floor((remaining % 86400000) / 3600000);
-        const minutes = Math.floor((remaining % 3600000) / 60000);
-        document.querySelector("#noticeDays").textContent = String(days).padStart(3, "0");
-        document.querySelector("#noticeHours").textContent = String(hours).padStart(2, "0");
-        document.querySelector("#noticeMinutes").textContent = String(minutes).padStart(2, "0");
-      }
-
       noticeNodes.toggle.addEventListener("click", () => {
         renderNotice(language === "en" ? "es" : "en");
       });
 
       renderNotice(language);
-      updateCountdown();
-      setInterval(updateCountdown, 60000);
     </script>
   </body>
 </html>

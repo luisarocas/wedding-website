@@ -151,7 +151,7 @@
             Many of our guests will be traveling long distances to celebrate with us. We are incredibly grateful for your love and support. Your presence means the world to us, and we do not expect any additional gifts.
           </p>
           <p id="bigDayGiftsBodyTwo">
-            If you do wish to give a gift, we kindly ask that you mail it to one of the addresses below. If you would like to contribute to our honeymoon or house fund, please use the link below.
+            If you do wish to give a gift, we kindly ask that you mail it to the address below. If you would like to contribute to our honeymoon or house fund, please use the link below.
           </p>
           <div class="address-grid">
             <article class="address-card">
@@ -161,18 +161,6 @@
           <a class="button primary" href="https://www.zola.com/wedding/luisandphil/registry" target="_blank" rel="noreferrer" id="bigDayRegistryLink">Registry link</a>
         </div>
       </section>
-
-      <section class="page-section countdown-section">
-        <div class="page-section-heading">
-          <p class="kicker" id="bigDayCountdownKicker">Counting down</p>
-          <h2 id="bigDayCountdownTitle">See you soon</h2>
-        </div>
-        <div class="countdown countdown-static" aria-label="Countdown to wedding">
-          <span><strong id="bigDayDays">000</strong><small id="bigDayDaysLabel">days</small></span>
-          <span><strong id="bigDayHours">00</strong><small id="bigDayHoursLabel">hours</small></span>
-          <span><strong id="bigDayMinutes">00</strong><small id="bigDayMinutesLabel">minutes</small></span>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
@@ -180,7 +168,6 @@
     </footer>
 
     <script>
-      const WEDDING_DATE = "2027-05-30T17:00:00+02:00";
       const bigDayCopy = {
         en: {
           brand: "Phillip & Luis",
@@ -240,14 +227,9 @@
           giftsKicker: "With love",
           giftsTitle: "Gifts",
           giftsBodyOne: "Many of our guests will be traveling long distances to celebrate with us. We are incredibly grateful for your love and support. Your presence means the world to us, and we do not expect any additional gifts.",
-          giftsBodyTwo: "If you do wish to give a gift, we kindly ask that you mail it to one of the addresses below. If you would like to contribute to our honeymoon or house fund, please use the link below.",
+          giftsBodyTwo: "If you do wish to give a gift, we kindly ask that you mail it to the address below. If you would like to contribute to our honeymoon or house fund, please use the link below.",
           giftAddress: "1060 N Marshfield Ave, Chicago, IL, 60622",
           registryLink: "Registry link",
-          countdownKicker: "Counting down",
-          countdownTitle: "See you soon",
-          days: "days",
-          hours: "hours",
-          minutes: "minutes",
           footer: "Phillip & Luis / The Big Day",
         },
         es: {
@@ -303,14 +285,9 @@
           giftsKicker: "Con cariño",
           giftsTitle: "Regalos",
           giftsBodyOne: "Estamos muy agradecidos por vuestro cariño y por compartir este momento con nosotros. Vuestra compañía significa muchísimo para nosotros, y no esperamos ningún regalo adicional.",
-          giftsBodyTwo: "Si deseáis hacernos un regalo, podéis enviarlo a una de las direcciones que aparecen a continuación. Si preferís contribuir a nuestra luna de miel o a nuestro futuro hogar, podéis hacerlo a través del enlace que encontraréis más abajo.",
+          giftsBodyTwo: "Si deseáis hacernos un regalo, podéis enviarlo a la dirección que aparece a continuación. Si preferís contribuir a nuestra luna de miel o a nuestro futuro hogar, podéis hacerlo a través del enlace que encontraréis más abajo.",
           giftAddress: "Avenida de Asturias, 128. Hoyo de Manzanares, Madrid, 28240",
           registryLink: "Ver regalos y aportaciones",
-          countdownKicker: "Cuenta atrás",
-          countdownTitle: "Nos vemos pronto",
-          days: "días",
-          hours: "horas",
-          minutes: "minutos",
           footer: "Phillip & Luis / El gran día",
         },
       };
@@ -376,11 +353,6 @@
         giftsBodyTwo: document.querySelector("#bigDayGiftsBodyTwo"),
         giftAddress: document.querySelector("#bigDayGiftAddress"),
         registryLink: document.querySelector("#bigDayRegistryLink"),
-        countdownKicker: document.querySelector("#bigDayCountdownKicker"),
-        countdownTitle: document.querySelector("#bigDayCountdownTitle"),
-        days: document.querySelector("#bigDayDaysLabel"),
-        hours: document.querySelector("#bigDayHoursLabel"),
-        minutes: document.querySelector("#bigDayMinutesLabel"),
         footer: document.querySelector("#bigDayFooter"),
         toggle: document.querySelector("#bigDayLanguageToggle"),
       };
@@ -400,25 +372,11 @@
 
         bigDayNodes.toggle.textContent = nextLanguage === "en" ? "ES" : "EN";
       }
-
-      function updateCountdown() {
-        const diff = new Date(WEDDING_DATE).getTime() - Date.now();
-        const remaining = Math.max(diff, 0);
-        const days = Math.floor(remaining / 86400000);
-        const hours = Math.floor((remaining % 86400000) / 3600000);
-        const minutes = Math.floor((remaining % 3600000) / 60000);
-        document.querySelector("#bigDayDays").textContent = String(days).padStart(3, "0");
-        document.querySelector("#bigDayHours").textContent = String(hours).padStart(2, "0");
-        document.querySelector("#bigDayMinutes").textContent = String(minutes).padStart(2, "0");
-      }
-
       bigDayNodes.toggle.addEventListener("click", () => {
         renderBigDay(language === "en" ? "es" : "en");
       });
 
       renderBigDay(language);
-      updateCountdown();
-      setInterval(updateCountdown, 60000);
     </script>
   </body>
 </html>
