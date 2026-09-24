@@ -32,9 +32,7 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--ink);
-  background:
-    radial-gradient(circle at 20% 20%, rgba(206, 217, 203, 0.42), transparent 28rem),
-    linear-gradient(180deg, var(--sage), var(--cream) 42%, #edf2e8);
+  background: var(--cream);
   font-family: "Libre Baskerville", Georgia, serif;
   position: relative;
   touch-action: pan-y;
@@ -141,8 +139,11 @@ a {
 }
 
 .button.large {
-  min-width: 9rem;
-  margin-top: 1.6rem;
+  min-width: 12rem;
+  min-height: 3.2rem;
+  margin-top: 0.85rem;
+  padding-inline: 1.75rem;
+  font-size: 0.78rem;
 }
 
 .language-gate {
@@ -244,6 +245,14 @@ a {
 
 .hero-link-row {
   margin: 1rem 0 0;
+}
+
+.rsvp-prompt {
+  width: min(32rem, 100%);
+  margin: 1.35rem auto 0;
+  color: var(--deep);
+  font-size: clamp(0.86rem, 1.6vw, 1rem);
+  line-height: 1.6;
 }
 
 .summary-card,

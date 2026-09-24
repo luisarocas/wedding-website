@@ -23,6 +23,7 @@ const copy = {
     days: "days",
     hours: "hours",
     minutes: "minutes",
+    rsvpPrompt: "RSVPs are now open. Please confirm your attendance below.",
     summaryKicker: "Everything in one place",
     summaryTitle: "The Big Day",
     summaryBody:
@@ -50,6 +51,7 @@ const copy = {
     days: "días",
     hours: "horas",
     minutes: "minutos",
+    rsvpPrompt: "Las confirmaciones ya están abiertas. Por favor, confirmad vuestra asistencia.",
     summaryKicker: "Todo en un mismo lugar",
     summaryTitle: "El gran día",
     summaryBody:
