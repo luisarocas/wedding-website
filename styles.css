@@ -756,6 +756,12 @@ html[lang="es"] .english-attire-only {
   aspect-ratio: 4 / 3;
 }
 
+.attire-gallery-single .gallery-card img {
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
 .gallery-card {
   overflow: hidden;
 }
