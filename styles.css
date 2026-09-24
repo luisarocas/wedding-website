@@ -268,18 +268,18 @@ a {
   padding-top: clamp(2.7rem, 6vw, 4rem);
 }
 
-.couple-photo-section {
-  padding: clamp(1.5rem, 4vw, 3rem) clamp(1.25rem, 5vw, 5rem) 0;
-  background: rgba(255, 253, 248, 0.3);
+.couple-photo-banner {
+  width: 100%;
+  background: var(--sage);
+  overflow: hidden;
 }
 
-.couple-photo-section img {
+.couple-photo-banner img {
   display: block;
-  width: min(68rem, 100%);
-  aspect-ratio: 3 / 2;
-  margin-inline: auto;
+  width: 100%;
+  height: clamp(20rem, 46vw, 46rem);
   object-fit: cover;
-  object-position: center 43%;
+  object-position: center 35%;
 }
 
 .page-copy-stack {
@@ -1089,14 +1089,9 @@ main {
     padding-top: 6.4rem;
   }
 
-  .couple-photo-section {
-    padding-inline: 0;
-  }
-
-  .couple-photo-section img {
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    object-position: center 58%;
+  .couple-photo-banner img {
+    height: min(112vw, 34rem);
+    object-position: center 44%;
   }
 
   .back-to-top {
