@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex,nofollow,noarchive" />
     <title>Attire Inspiration</title>
+    <script>
+      try {
+        if (localStorage.getItem("wedding-language") === "es") {
+          window.location.replace("index.html");
+        }
+      } catch (error) {
+        // Keep the English page available if storage is unavailable.
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
@@ -20,7 +29,7 @@
         <a href="index.html"><span class="desktop-label" id="attireNavHome">Home</span><span class="mobile-label" id="attireNavHomeMobile">Home</span></a>
         <a href="big-day.html"><span class="desktop-label" id="attireNavBigDay">The Big Day</span><span class="mobile-label" id="attireNavBigDayMobile">Big Day</span></a>
         <a href="things-to-do.html"><span class="desktop-label" id="attireNavThings">Things to Do</span><span class="mobile-label" id="attireNavThingsMobile">Plans</span></a>
-        <a href="attire.html"><span class="desktop-label" id="attireNavAttire">Attire</span><span class="mobile-label" id="attireNavAttireMobile">Attire</span></a>
+        <a class="english-attire-only" href="attire.html"><span class="desktop-label" id="attireNavAttire">Attire</span><span class="mobile-label" id="attireNavAttireMobile">Attire</span></a>
         <a href="faq.html"><span class="desktop-label" id="attireNavFaq">FAQ</span><span class="mobile-label" id="attireNavFaqMobile">FAQ</span></a>
       </nav>
       <div class="header-actions">
@@ -160,10 +169,11 @@
         attireNodes.toggle.textContent = nextLanguage === "en" ? "ES" : "EN";
       }
       attireNodes.toggle.addEventListener("click", () => {
-        renderAttire(language === "en" ? "es" : "en");
+        localStorage.setItem("wedding-language", "es");
+        window.location.href = "index.html";
       });
 
-      renderAttire(language);
+      renderAttire("en");
     </script>
   </body>
 </html>
