@@ -1,4 +1,4 @@
-const RSVP_URL = "rsvp.html";
+const RSVP_URL = "https://www.zola.com/wedding/luisandphil/rsvp";
 const WEDDING_DATE = "2027-05-30T17:00:00+02:00";
 
 const copy = {
@@ -23,7 +23,6 @@ const copy = {
     days: "days",
     hours: "hours",
     minutes: "minutes",
-    banner: "We can't wait to celebrate with you. RSVPs for our celebration in Spain will open in August 2026.",
     summaryKicker: "Everything in one place",
     summaryTitle: "The Big Day",
     summaryBody:
@@ -51,7 +50,6 @@ const copy = {
     days: "días",
     hours: "horas",
     minutes: "minutos",
-    banner: "Tenemos muchas ganas de celebrarlo con vosotros. Podréis confirmar vuestra asistencia a partir de agosto de 2026.",
     summaryKicker: "Todo en un mismo lugar",
     summaryTitle: "El gran día",
     summaryBody:
