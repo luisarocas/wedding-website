@@ -256,8 +256,7 @@ a {
 }
 
 .summary-card,
-.gift-card,
-.address-card {
+.gift-card {
   background: rgba(251, 252, 248, 0.82);
   border: 1px solid var(--line);
   box-shadow: 0 12px 36px rgba(55, 61, 45, 0.06);
@@ -295,18 +294,6 @@ a {
 .page-copy-stack {
   width: min(58rem, 100%);
   margin-inline: auto;
-}
-
-.address-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.85rem;
-  margin-top: 0.2rem;
-}
-
-.address-card {
-  padding: 1.2rem;
-  text-align: center;
 }
 
 .countdown-section {
@@ -938,10 +925,6 @@ main {
 
   .shuttle-card {
     grid-column: auto;
-  }
-
-  .address-grid {
-    grid-template-columns: 1fr;
   }
 
   .couple-photo-banner {
