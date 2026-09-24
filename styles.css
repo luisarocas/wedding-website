@@ -270,6 +270,7 @@ a {
 
 .couple-photo-banner {
   width: 100%;
+  aspect-ratio: 2.08 / 1;
   background: var(--sage);
   overflow: hidden;
 }
@@ -277,7 +278,7 @@ a {
 .couple-photo-banner img {
   display: block;
   width: 100%;
-  height: clamp(20rem, 46vw, 46rem);
+  height: 100%;
   object-fit: cover;
   object-position: center 35%;
 }
@@ -933,6 +934,14 @@ main {
   .address-grid {
     grid-template-columns: 1fr;
   }
+
+  .couple-photo-banner {
+    aspect-ratio: 3 / 2;
+  }
+
+  .couple-photo-banner img {
+    object-position: center 40%;
+  }
 }
 
 @media (max-width: 540px) {
@@ -1090,8 +1099,11 @@ main {
   }
 
   .couple-photo-banner img {
-    height: min(112vw, 34rem);
     object-position: center 44%;
+  }
+
+  .couple-photo-banner {
+    aspect-ratio: 4 / 5;
   }
 
   .back-to-top {
