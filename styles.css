@@ -672,6 +672,11 @@ html[lang="es"] .english-attire-only {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.feature-grid-single {
+  grid-template-columns: minmax(0, 1fr);
+  width: min(34rem, 100%);
+}
+
 .feature-card,
 .city-card,
 .attire-copy,
@@ -950,7 +955,7 @@ main {
   }
 
   .desktop-nav {
-    display: flex;
+    display: grid;
     grid-column: 1 / -1;
     order: 3;
     grid-template-columns: repeat(3, minmax(0, 1fr));
