@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <title>Gallery | Phillip & Luis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <img class="floral floral-top" src="https://images.zola.com/2f2a85e8-7ad9-4984-886c-dd6a19357088" alt="" aria-hidden="true" />
+    <img class="floral floral-bottom" src="https://images.zola.com/77ef4b64-973d-46e7-836f-13b0da264eaf" alt="" aria-hidden="true" />
+
+    <header class="site-header">
+      <a class="brand" href="index.html" id="galleryBrand">Phillip & Luis</a>
+      <nav class="desktop-nav" aria-label="Gallery navigation">
+        <a href="index.html"><span class="desktop-label" id="galleryNavHome">Home</span><span class="mobile-label" id="galleryNavHomeMobile">Home</span></a>
+        <a href="big-day.html"><span class="desktop-label" id="galleryNavBigDay">The Big Day</span><span class="mobile-label" id="galleryNavBigDayMobile">Big Day</span></a>
+        <a href="things-to-do.html"><span class="desktop-label" id="galleryNavThings">Things to Do</span><span class="mobile-label" id="galleryNavThingsMobile">Plans</span></a>
+        <a href="gallery.html"><span class="desktop-label" id="galleryNavGallery">Gallery</span><span class="mobile-label" id="galleryNavGalleryMobile">Photos</span></a>
+        <a class="english-attire-only" href="attire.html"><span class="desktop-label" id="galleryNavAttire">Attire</span><span class="mobile-label" id="galleryNavAttireMobile">Attire</span></a>
+        <a href="https://www.zola.com/wedding/luisandphil/rsvp">RSVP</a>
+        <a href="faq.html"><span class="desktop-label" id="galleryNavFaq">FAQ</span><span class="mobile-label" id="galleryNavFaqMobile">FAQ</span></a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-toggle" id="galleryLanguageToggle" type="button" aria-label="Switch language">ES</button>
+        <a class="rsvp-link" href="https://www.zola.com/wedding/luisandphil/rsvp" id="galleryRsvp">RSVP</a>
+      </div>
+    </header>
+
+    <main class="subpage-main">
+      <section class="subpage-hero gallery-hero">
+        <div class="subpage-hero-inner">
+          <p class="kicker" id="galleryHeroKicker">A few favorite moments</p>
+          <h1 id="galleryHeroTitle">Our Gallery</h1>
+          <p id="galleryHeroBody">A little collection of memories from our life together.</p>
+        </div>
+      </section>
+
+      <section class="page-section gallery-section" aria-labelledby="galleryHeroTitle">
+        <div class="gallery-page-grid">
+          <button class="gallery-page-item" type="button" data-gallery-index="0" aria-label="Open photo 1">
+            <img src="assets/gallery/gallery-01.webp" alt="Luis and Phillip together in Chicago" width="1600" height="2400" />
+          </button>
+          <button class="gallery-page-item gallery-page-item-wide" type="button" data-gallery-index="1" aria-label="Open photo 2">
+            <img src="assets/gallery/gallery-02.webp" alt="Luis and Phillip enjoying a day together in Chicago" width="2400" height="1600" loading="lazy" />
+          </button>
+          <button class="gallery-page-item" type="button" data-gallery-index="2" aria-label="Open photo 3">
+            <img src="assets/gallery/gallery-03.webp" alt="Luis and Phillip smiling together" width="1600" height="2400" loading="lazy" />
+          </button>
+          <button class="gallery-page-item" type="button" data-gallery-index="3" aria-label="Open photo 4">
+            <img src="assets/gallery/gallery-04.webp" alt="Luis and Phillip posing together" width="1600" height="2400" loading="lazy" />
+          </button>
+          <button class="gallery-page-item" type="button" data-gallery-index="4" aria-label="Open photo 5">
+            <img src="assets/gallery/gallery-05.webp" alt="Luis and Phillip seated together outdoors" width="1600" height="2400" loading="lazy" />
+          </button>
+          <button class="gallery-page-item" type="button" data-gallery-index="5" aria-label="Open photo 6">
+            <img src="assets/gallery/gallery-06.webp" alt="Luis and Phillip together on a sunny day" width="1600" height="2400" loading="lazy" />
+          </button>
+          <button class="gallery-page-item" type="button" data-gallery-index="6" aria-label="Open photo 7">
+            <img src="assets/gallery/gallery-07.webp" alt="Luis and Phillip visiting Chicago" width="1566" height="2400" loading="lazy" />
+          </button>
+          <button class="gallery-page-item" type="button" data-gallery-index="7" aria-label="Open photo 8">
+            <img src="assets/gallery/gallery-08.webp" alt="Luis and Phillip together outdoors" width="1574" height="2400" loading="lazy" />
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p id="galleryFooter">Phillip & Luis / Gallery</p>
+    </footer>
+
+    <dialog class="gallery-lightbox" id="galleryLightbox" aria-label="Photo viewer">
+      <button class="gallery-lightbox-close" id="galleryClose" type="button" aria-label="Close photo viewer" title="Close">&times;</button>
+      <button class="gallery-lightbox-nav gallery-lightbox-prev" id="galleryPrev" type="button" aria-label="Previous photo" title="Previous">&#8592;</button>
+      <img id="galleryLightboxImage" src="assets/gallery/gallery-01.webp" alt="Luis and Phillip together" />
+      <button class="gallery-lightbox-nav gallery-lightbox-next" id="galleryNext" type="button" aria-label="Next photo" title="Next">&#8594;</button>
+    </dialog>
+
+    <button class="back-to-top" id="galleryBackToTop" type="button" aria-label="Back to top">&#8593;</button>
+
+    <script>
+      const galleryCopy = {
+        en: {
+          brand: "Phillip & Luis",
+          navHome: "Home",
+          navHomeMobile: "Home",
+          navBigDay: "The Big Day",
+          navBigDayMobile: "Big Day",
+          navThings: "Things to Do",
+          navThingsMobile: "Plans",
+          navGallery: "Gallery",
+          navGalleryMobile: "Photos",
+          navAttire: "Attire",
+          navAttireMobile: "Attire",
+          navFaq: "FAQ",
+          navFaqMobile: "FAQ",
+          rsvp: "RSVP",
+          heroKicker: "A few favorite moments",
+          heroTitle: "Our Gallery",
+          heroBody: "A little collection of memories from our life together.",
+          footer: "Phillip & Luis / Gallery",
+        },
+        es: {
+          brand: "Phillip & Luis",
+          navHome: "Inicio",
+          navHomeMobile: "Inicio",
+          navBigDay: "El gran día",
+          navBigDayMobile: "Gran día",
+          navThings: "Cosas que hacer",
+          navThingsMobile: "Planes",
+          navGallery: "Galería",
+          navGalleryMobile: "Fotos",
+          navAttire: "Vestimenta",
+          navAttireMobile: "Vestir",
+          navFaq: "Preguntas",
+          navFaqMobile: "FAQ",
+          rsvp: "RSVP",
+          heroKicker: "Algunos de nuestros momentos favoritos",
+          heroTitle: "Nuestra galería",
+          heroBody: "Una pequeña colección de recuerdos de nuestra vida juntos.",
+          footer: "Phillip & Luis / Galería",
+        },
+      };
+
+      const galleryNodes = {
+        brand: document.querySelector("#galleryBrand"),
+        navHome: document.querySelector("#galleryNavHome"),
+        navHomeMobile: document.querySelector("#galleryNavHomeMobile"),
+        navBigDay: document.querySelector("#galleryNavBigDay"),
+        navBigDayMobile: document.querySelector("#galleryNavBigDayMobile"),
+        navThings: document.querySelector("#galleryNavThings"),
+        navThingsMobile: document.querySelector("#galleryNavThingsMobile"),
+        navGallery: document.querySelector("#galleryNavGallery"),
+        navGalleryMobile: document.querySelector("#galleryNavGalleryMobile"),
+        navAttire: document.querySelector("#galleryNavAttire"),
+        navAttireMobile: document.querySelector("#galleryNavAttireMobile"),
+        navFaq: document.querySelector("#galleryNavFaq"),
+        navFaqMobile: document.querySelector("#galleryNavFaqMobile"),
+        rsvp: document.querySelector("#galleryRsvp"),
+        heroKicker: document.querySelector("#galleryHeroKicker"),
+        heroTitle: document.querySelector("#galleryHeroTitle"),
+        heroBody: document.querySelector("#galleryHeroBody"),
+        footer: document.querySelector("#galleryFooter"),
+        toggle: document.querySelector("#galleryLanguageToggle"),
+      };
+
+      let language = localStorage.getItem("wedding-language") || "en";
+
+      function renderGallery(nextLanguage) {
+        language = nextLanguage;
+        localStorage.setItem("wedding-language", nextLanguage);
+        document.documentElement.lang = nextLanguage;
+        const copy = galleryCopy[nextLanguage];
+
+        Object.entries(galleryNodes).forEach(([key, node]) => {
+          if (!node || key === "toggle") return;
+          node.textContent = copy[key];
+        });
+
+        galleryNodes.toggle.textContent = nextLanguage === "en" ? "ES" : "EN";
+      }
+
+      galleryNodes.toggle.addEventListener("click", () => {
+        renderGallery(language === "en" ? "es" : "en");
+      });
+
+      renderGallery(language);
+
+      const images = Array.from(document.querySelectorAll(".gallery-page-item img"));
+      const lightbox = document.querySelector("#galleryLightbox");
+      const lightboxImage = document.querySelector("#galleryLightboxImage");
+      let activeIndex = 0;
+
+      function showPhoto(index) {
+        activeIndex = (index + images.length) % images.length;
+        lightboxImage.src = images[activeIndex].src;
+        lightboxImage.alt = images[activeIndex].alt;
+      }
+
+      document.querySelectorAll(".gallery-page-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          showPhoto(Number(item.dataset.galleryIndex));
+          lightbox.showModal();
+        });
+      });
+
+      document.querySelector("#galleryClose").addEventListener("click", () => lightbox.close());
+      document.querySelector("#galleryPrev").addEventListener("click", () => showPhoto(activeIndex - 1));
+      document.querySelector("#galleryNext").addEventListener("click", () => showPhoto(activeIndex + 1));
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) lightbox.close();
+      });
+
+      const backToTop = document.querySelector("#galleryBackToTop");
+      backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+      window.addEventListener("scroll", () => {
+        backToTop.classList.toggle("visible", window.scrollY > 500);
+      }, { passive: true });
+    </script>
+  </body>
+</html>
