@@ -3,7 +3,7 @@ const WEDDING_DATE = "2027-05-30T17:00:00+02:00";
 
 const copy = {
   en: {
-    brand: "Phillip & Luis",
+    brand: "Phil & Luis",
     navHome: "Home",
     navHomeMobile: "Home",
     navBigDay: "The Big Day",
@@ -33,7 +33,7 @@ const copy = {
     summaryButton: "See The Big Day",
   },
   es: {
-    brand: "Phillip & Luis",
+    brand: "Phil & Luis",
     navHome: "Inicio",
     navHomeMobile: "Inicio",
     navBigDay: "El gran día",
