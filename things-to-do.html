@@ -44,10 +44,20 @@
 
       <section class="page-section">
         <div class="page-section-heading">
-          <p class="kicker" id="eventsKicker">Weekend plan</p>
-          <h2 id="eventsTitle">Wedding Weekend Plan</h2>
+          <p class="kicker" id="eventsKicker">Weekend plans</p>
+          <h2 id="eventsTitle">Wedding Weekend Events</h2>
         </div>
-        <div class="feature-grid feature-grid-single">
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3 id="welcomeTitle">Welcome Drinks</h3>
+            <div class="feature-meta">
+              <span class="tag" id="welcomeWhen">Friday evening</span>
+              <span class="tag" id="welcomeAccess">By invitation</span>
+            </div>
+            <p id="welcomeBody">We are planning a small welcome gathering for a limited number of guests, primarily those traveling from abroad and close friends.</p>
+            <p id="welcomeNote">Due to limited capacity, invitations and full details will be shared directly closer to the wedding.</p>
+          </article>
+
           <article class="feature-card">
             <h3 id="tourTitle">Madrid Walking Tour</h3>
             <div class="feature-meta">
@@ -119,8 +129,13 @@
           heroKicker: "Around the wedding weekend",
           heroTitle: "Things to Do",
           heroBody: "If you'll be in Madrid for the weekend, we'd love for everyone to have a few chances to meet, explore, and enjoy the city together.",
-          eventsKicker: "Weekend plan",
-          eventsTitle: "Wedding Weekend Plan",
+          eventsKicker: "Weekend plans",
+          eventsTitle: "Wedding Weekend Events",
+          welcomeTitle: "Welcome Drinks",
+          welcomeWhen: "Friday evening",
+          welcomeAccess: "By invitation",
+          welcomeBody: "We are planning a small welcome gathering for a limited number of guests, primarily those traveling from abroad and close friends.",
+          welcomeNote: "Due to limited capacity, invitations and full details will be shared directly closer to the wedding.",
           tourTitle: "Madrid Walking Tour",
           tourWhen: "Saturday, around 12:00 PM",
           tourOptional: "Optional",
@@ -161,8 +176,13 @@
           heroKicker: "Alrededor del fin de semana de la boda",
           heroTitle: "Cosas que hacer",
           heroBody: "Si vais a estar en Madrid ese fin de semana, nos encantará que haya varios momentos para vernos, explorar la ciudad y disfrutarla juntos.",
-          eventsKicker: "Plan del fin de semana",
-          eventsTitle: "Plan del fin de semana",
+          eventsKicker: "Planes del fin de semana",
+          eventsTitle: "Eventos del fin de semana",
+          welcomeTitle: "Copa de bienvenida",
+          welcomeWhen: "Viernes por la tarde",
+          welcomeAccess: "Con invitación",
+          welcomeBody: "Estamos organizando un pequeño encuentro de bienvenida para un grupo limitado de invitados, principalmente quienes viajan desde el extranjero y amigos cercanos.",
+          welcomeNote: "Debido al aforo limitado, enviaremos las invitaciones y todos los detalles directamente más adelante.",
           tourTitle: "Madrid Walking Tour",
           tourWhen: "Sábado, sobre las 12:00",
           tourOptional: "Opcional",
@@ -207,6 +227,11 @@
         heroBody: document.querySelector("#thingsHeroBody"),
         eventsKicker: document.querySelector("#eventsKicker"),
         eventsTitle: document.querySelector("#eventsTitle"),
+        welcomeTitle: document.querySelector("#welcomeTitle"),
+        welcomeWhen: document.querySelector("#welcomeWhen"),
+        welcomeAccess: document.querySelector("#welcomeAccess"),
+        welcomeBody: document.querySelector("#welcomeBody"),
+        welcomeNote: document.querySelector("#welcomeNote"),
         tourTitle: document.querySelector("#tourTitle"),
         tourWhen: document.querySelector("#tourWhen"),
         tourOptional: document.querySelector("#tourOptional"),
