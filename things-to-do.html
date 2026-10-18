@@ -22,8 +22,8 @@
         <a href="things-to-do.html"><span class="desktop-label" id="thingsNavThings">Things to Do</span><span class="mobile-label" id="thingsNavThingsMobile">Plans</span></a>
         <a href="gallery.html"><span class="desktop-label" id="thingsNavGallery">Gallery</span><span class="mobile-label" id="thingsNavGalleryMobile">Photos</span></a>
         <a class="english-attire-only" href="attire.html"><span class="desktop-label" id="thingsNavAttire">Attire</span><span class="mobile-label" id="thingsNavAttireMobile">Attire</span></a>
-        <a href="https://www.zola.com/wedding/luisandphil/rsvp">RSVP</a>
         <a href="faq.html"><span class="desktop-label" id="thingsNavFaq">FAQ</span><span class="mobile-label" id="thingsNavFaqMobile">FAQ</span></a>
+        <a href="https://www.zola.com/wedding/luisandphil/rsvp" id="thingsNavRsvp">RSVP</a>
       </nav>
       <div class="header-actions">
         <button class="lang-toggle" id="thingsLanguageToggle" type="button" aria-label="Switch language">ES</button>
@@ -114,6 +114,7 @@
           navAttireMobile: "Attire",
           navFaq: "FAQ",
           navFaqMobile: "FAQ",
+          navRsvp: "RSVP",
           rsvp: "RSVP",
           heroKicker: "Around the wedding weekend",
           heroTitle: "Things to Do",
@@ -155,7 +156,8 @@
           navAttireMobile: "Vestir",
           navFaq: "Preguntas",
           navFaqMobile: "FAQ",
-          rsvp: "RSVP",
+          navRsvp: "Confirmar",
+          rsvp: "Confirmar",
           heroKicker: "Alrededor del fin de semana de la boda",
           heroTitle: "Cosas que hacer",
           heroBody: "Si vais a estar en Madrid ese fin de semana, nos encantará que haya varios momentos para vernos, explorar la ciudad y disfrutarla juntos.",
@@ -165,7 +167,7 @@
           tourWhen: "Sábado, sobre las 12:00",
           tourOptional: "Opcional",
           tourBody: "Nos gustaría organizar un paseo guiado por el centro de Madrid para que los invitados conozcan un poco mejor la historia de la ciudad, coincidan con más gente de la boda y pasen un rato juntos.",
-          tourNote: "Confirmaremos más detalles más adelante. Puede que el RSVP sea necesario más adelante para llevar mejor la cuenta.",
+          tourNote: "Confirmaremos más detalles más adelante. Puede que sea necesario confirmar asistencia para llevar mejor la cuenta.",
           cityKicker: "Madrid clásico",
           cityTitle: "Algunas Paradas Favoritas",
           retiroTitle: "Parque del Retiro",
@@ -198,6 +200,7 @@
         navAttireMobile: document.querySelector("#thingsNavAttireMobile"),
         navFaq: document.querySelector("#thingsNavFaq"),
         navFaqMobile: document.querySelector("#thingsNavFaqMobile"),
+        navRsvp: document.querySelector("#thingsNavRsvp"),
         rsvp: document.querySelector("#thingsRsvp"),
         heroKicker: document.querySelector("#thingsHeroKicker"),
         heroTitle: document.querySelector("#thingsHeroTitle"),

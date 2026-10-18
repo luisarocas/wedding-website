@@ -22,8 +22,8 @@
         <a href="things-to-do.html"><span class="desktop-label" id="bigDayNavThings">Things to Do</span><span class="mobile-label" id="bigDayNavThingsMobile">Plans</span></a>
         <a href="gallery.html"><span class="desktop-label" id="bigDayNavGallery">Gallery</span><span class="mobile-label" id="bigDayNavGalleryMobile">Photos</span></a>
         <a class="english-attire-only" href="attire.html"><span class="desktop-label" id="bigDayNavAttire">Attire</span><span class="mobile-label" id="bigDayNavAttireMobile">Attire</span></a>
-        <a href="https://www.zola.com/wedding/luisandphil/rsvp">RSVP</a>
         <a href="faq.html"><span class="desktop-label" id="bigDayNavFaq">FAQ</span><span class="mobile-label" id="bigDayNavFaqMobile">FAQ</span></a>
+        <a href="https://www.zola.com/wedding/luisandphil/rsvp" id="bigDayNavRsvp">RSVP</a>
       </nav>
       <div class="header-actions">
         <button class="lang-toggle" id="bigDayLanguageToggle" type="button" aria-label="Switch language">ES</button>
@@ -89,7 +89,7 @@
         </div>
       </section>
 
-      <section class="page-section">
+      <section class="page-section english-only">
         <div class="page-section-heading">
           <p class="kicker" id="bigDayTravelKicker">For out-of-town guests</p>
           <h2 id="bigDayTravelTitle">Travel</h2>
@@ -122,7 +122,7 @@
         </div>
       </section>
 
-      <section class="page-section">
+      <section class="page-section english-only">
         <div class="page-section-heading">
           <p class="kicker" id="bigDayOverviewKicker">Weekend at a glance</p>
           <h2 id="bigDayOverviewTitle">Weekend Overview</h2>
@@ -146,7 +146,7 @@
         </div>
         <div class="gift-card">
           <p id="bigDayGiftsBodyOne">
-            Many of our guests will be traveling long distances to celebrate with us. We are incredibly grateful for your love and support. Your presence means the world to us, and we do not expect any additional gifts. If you would like to contribute to our wedding fund, please use the link below.
+            Many of our guests will be traveling long distances to celebrate with us. We are incredibly grateful for your love and support. Your presence means the world to us, and we truly do not expect any additional gifts. If you would like to contribute to our wedding fund, please use the link below.
           </p>
           <a class="button primary" href="https://www.zola.com/wedding/luisandphil/registry" target="_blank" rel="noreferrer" id="bigDayRegistryLink">Contribute to our wedding fund</a>
         </div>
@@ -173,6 +173,7 @@
           navAttireMobile: "Attire",
           navFaq: "FAQ",
           navFaqMobile: "FAQ",
+          navRsvp: "RSVP",
           rsvp: "RSVP",
           heroKicker: "The celebration",
           heroTitle: "The Big Day",
@@ -216,7 +217,7 @@
           overviewSundayBody: "Ceremony begins at 5:00 PM, followed by cocktails, dinner, music, and dancing.",
           giftsKicker: "With love",
           giftsTitle: "Gifts",
-          giftsBodyOne: "Many of our guests will be traveling long distances to celebrate with us. We are incredibly grateful for your love and support. Your presence means the world to us, and we do not expect any additional gifts. If you would like to contribute to our wedding fund, please use the link below.",
+          giftsBodyOne: "Many of our guests will be traveling long distances to celebrate with us. We are incredibly grateful for your love and support. Your presence means the world to us, and we truly do not expect any additional gifts. If you would like to contribute to our wedding fund, please use the link below.",
           registryLink: "Contribute to our wedding fund",
           footer: "Phillip & Luis / The Big Day",
         },
@@ -234,7 +235,8 @@
           navAttireMobile: "Vestir",
           navFaq: "Preguntas",
           navFaqMobile: "FAQ",
-          rsvp: "RSVP",
+          navRsvp: "Confirmar",
+          rsvp: "Confirmar",
           heroKicker: "La celebración",
           heroTitle: "El gran día",
           heroBody: "Todo lo que necesitáis para el día de la boda, en un solo lugar.",
@@ -272,8 +274,8 @@
           overviewSundayBody: "La ceremonia comienza a las 17:00, seguida de cóctel, cena, música y baile.",
           giftsKicker: "Con cariño",
           giftsTitle: "Regalos",
-          giftsBodyOne: "Estamos muy agradecidos por vuestro cariño y por compartir este momento con nosotros. Vuestra compañía significa muchísimo para nosotros, y no esperamos ningún regalo adicional. Si preferís contribuir al fondo de la boda, podéis hacerlo a través del enlace que encontraréis más abajo.",
-          registryLink: "Contribuir al fondo de la boda",
+          giftsBodyOne: "Estamos muy agradecidos por vuestro cariño y por compartir este momento con nosotros. Vuestra compañía significa muchísimo para nosotros, y no esperamos ningún regalo adicional. Aun así, si queréis contribuir a nuestra boda, podéis hacerlo a través del enlace que encontraréis más abajo.",
+          registryLink: "Contribuir a nuestra boda",
           footer: "Phillip & Luis / El gran día",
         },
       };
@@ -292,6 +294,7 @@
         navAttireMobile: document.querySelector("#bigDayNavAttireMobile"),
         navFaq: document.querySelector("#bigDayNavFaq"),
         navFaqMobile: document.querySelector("#bigDayNavFaqMobile"),
+        navRsvp: document.querySelector("#bigDayNavRsvp"),
         rsvp: document.querySelector("#bigDayRsvp"),
         heroKicker: document.querySelector("#bigDayHeroKicker"),
         heroTitle: document.querySelector("#bigDayHeroTitle"),
