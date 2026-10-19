@@ -253,6 +253,10 @@ a {
   line-height: 1.6;
 }
 
+html[lang="en"] .rsvp-prompt {
+  white-space: nowrap;
+}
+
 .summary-card,
 .gift-card {
   background: rgba(251, 252, 248, 0.82);
@@ -267,6 +271,15 @@ a {
   display: grid;
   gap: 0.65rem;
   padding: clamp(1.35rem, 3vw, 1.9rem);
+  text-align: center;
+}
+
+.flight-nudge {
+  margin: 1.1rem auto 0;
+  color: var(--olive);
+  font-size: 0.92rem;
+  font-style: italic;
+  font-weight: 700;
   text-align: center;
 }
 

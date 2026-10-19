@@ -43,6 +43,22 @@
       <section class="page-section">
         <div class="faq-list">
           <details open>
+            <summary id="faqDeadlineQ">When is the RSVP deadline?</summary>
+            <p id="faqDeadlineA">Please submit your RSVP by April 15, 2027.</p>
+          </details>
+          <details class="english-only" open>
+            <summary id="faqFourQ">When should we book our flights to Madrid?</summary>
+            <p id="faqFourA">Now is a good time to book. We recommend booking your flights to Madrid soon for the best selection and availability.</p>
+          </details>
+          <details open>
+            <summary id="faqFiveQ">What if I cannot attend?</summary>
+            <p id="faqFiveA">We understand that attending may not be possible for everyone, but please know we're grateful for your love and support in any form.</p>
+          </details>
+          <details class="english-only" open>
+            <summary id="faqSixQ">When should I arrive?</summary>
+            <p id="faqSixA">We recommend arriving at least one day before the wedding to allow time to settle in and adjust to travel. If you're coming from abroad, arriving two days before is ideal.</p>
+          </details>
+          <details open>
             <summary id="faqTwoQ">What is the dress code?</summary>
             <p>
               <span id="faqTwoA">We invite our guests to dress in formal attire for the celebration. Gentlemen are encouraged to wear a suit and tie. Suit should ideally be in darker tones, and tie can be colorful. Ladies may choose long dresses in flowing fabrics like chiffon, silk, and tulle. Color is highly encouraged! We kindly ask guests to refrain from wearing white.</span>
@@ -54,24 +70,12 @@
             <p id="faqThreeA">Yes. Transportation will be provided to the venue and back at the end of the night. Details and timing will be shared closer to the date.</p>
           </details>
           <details open>
-            <summary id="faqFourQ">When should we book our flights to Madrid?</summary>
-            <p id="faqFourA">We recommend booking 6-9 months in advance for the best prices and availability.</p>
-          </details>
-          <details open>
-            <summary id="faqFiveQ">What if I cannot attend?</summary>
-            <p id="faqFiveA">We completely understand that international travel isn't possible for everyone. We're planning a separate celebration in Chicago, date to be determined, for those who can't join us in Spain, but please know we're grateful for your love and support in any form.</p>
-          </details>
-          <details open>
-            <summary id="faqSixQ">When should I arrive?</summary>
-            <p id="faqSixA">We recommend arriving at least one day before the wedding to allow time to settle in and adjust to travel. If you're coming from abroad, arriving two days before is ideal.</p>
+            <summary id="faqEightQ">Special dietary needs?</summary>
+            <p id="faqEightA">Please indicate any dietary restrictions when you RSVP, and we will do our best to accommodate you.</p>
           </details>
           <details open>
             <summary id="faqSevenQ">Is the wedding indoors or outdoors?</summary>
             <p id="faqSevenA">The ceremony will be held outdoors, weather permitting, followed by an indoor reception. Please plan accordingly.</p>
-          </details>
-          <details open>
-            <summary id="faqEightQ">Special dietary needs?</summary>
-            <p id="faqEightA">Please indicate any dietary restrictions when you RSVP, and we will do our best to accommodate you.</p>
           </details>
         </div>
       </section>
@@ -109,9 +113,11 @@
           faqThreeQ: "Will transportation be provided?",
           faqThreeA: "Yes. Transportation will be provided to the venue and back at the end of the night. Details and timing will be shared closer to the date.",
           faqFourQ: "When should we book our flights to Madrid?",
-          faqFourA: "We recommend booking 6-9 months in advance for the best prices and availability.",
+          faqFourA: "Now is a good time to book. We recommend booking your flights to Madrid soon for the best selection and availability.",
+          faqDeadlineQ: "When is the RSVP deadline?",
+          faqDeadlineA: "Please submit your RSVP by April 15, 2027.",
           faqFiveQ: "What if I cannot attend?",
-          faqFiveA: "We completely understand that international travel isn't possible for everyone. We're planning a separate celebration in Chicago, date to be determined, for those who can't join us in Spain, but please know we're grateful for your love and support in any form.",
+          faqFiveA: "We understand that attending may not be possible for everyone, but please know we're grateful for your love and support in any form.",
           faqSixQ: "When should I arrive?",
           faqSixA: "We recommend arriving at least one day before the wedding to allow time to settle in and adjust to travel. If you're coming from abroad, arriving two days before is ideal.",
           faqSevenQ: "Is the wedding indoors or outdoors?",
@@ -145,9 +151,11 @@
           faqThreeQ: "¿Habrá transporte?",
           faqThreeA: "Sí. Habrá transporte al lugar de la boda y de regreso al final de la noche. Compartiremos los detalles y horarios más cerca de la fecha.",
           faqFourQ: "¿Cuándo deberíamos reservar vuelos a Madrid?",
-          faqFourA: "Recomendamos reservar con 6-9 meses de antelación para conseguir mejores precios y disponibilidad.",
+          faqFourA: "Si vais a viajar desde el extranjero, este es un buen momento para reservar los vuelos a Madrid. Recomendamos hacerlo pronto para encontrar más opciones y disponibilidad.",
+          faqDeadlineQ: "¿Cuál es la fecha límite para confirmar la asistencia?",
+          faqDeadlineA: "Por favor, confirmad vuestra asistencia antes del 15 de abril de 2027.",
           faqFiveQ: "¿Qué pasa si no podemos asistir?",
-          faqFiveA: "Entendemos completamente que viajar internacionalmente no es posible para todos. Estamos planeando una celebración aparte en Chicago, con fecha por determinar, para quienes no puedan acompañarnos en España. Aun así, agradecemos vuestro cariño y apoyo en cualquier forma.",
+          faqFiveA: "Entendemos que no todos podréis asistir, pero agradecemos vuestro cariño y apoyo en cualquier forma.",
           faqSixQ: "¿Cuándo deberíamos llegar?",
           faqSixA: "Recomendamos llegar al menos un día antes de la boda para instalaros y adaptaros al viaje. Si venís del extranjero, lo ideal es llegar dos días antes.",
           faqSevenQ: "¿La boda será interior o exterior?",
@@ -184,6 +192,8 @@
         faqThreeA: document.querySelector("#faqThreeA"),
         faqFourQ: document.querySelector("#faqFourQ"),
         faqFourA: document.querySelector("#faqFourA"),
+        faqDeadlineQ: document.querySelector("#faqDeadlineQ"),
+        faqDeadlineA: document.querySelector("#faqDeadlineA"),
         faqFiveQ: document.querySelector("#faqFiveQ"),
         faqFiveA: document.querySelector("#faqFiveA"),
         faqSixQ: document.querySelector("#faqSixQ"),
