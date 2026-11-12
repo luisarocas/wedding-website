@@ -386,6 +386,10 @@ html[lang="en"] .rsvp-prompt {
   gap: 0.8rem;
 }
 
+.transport-summary {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .event-summary article {
   display: grid;
   gap: 0.65rem;

@@ -63,7 +63,7 @@ const copy = {
     rsvpPrompt: "Por favor, confirmad asistencia antes del 15 de abril de 2027.",
     summaryKicker: "Todo en un mismo lugar",
     summaryTitle: "El gran día",
-    summaryBody: "En la página de El gran día encontraréis más detalles sobre la celebración.",
+    summaryBody: "En la página del gran día encontraréis más detalles sobre la celebración.",
     summaryButton: "Ver El gran día",
   },
 };
