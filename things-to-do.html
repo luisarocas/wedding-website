@@ -19,15 +19,16 @@
       <nav class="desktop-nav" aria-label="Things to do navigation">
         <a href="index.html"><span class="desktop-label" id="thingsNavHome">Home</span><span class="mobile-label" id="thingsNavHomeMobile">Home</span></a>
         <a href="big-day.html"><span class="desktop-label" id="thingsNavBigDay">The Big Day</span><span class="mobile-label" id="thingsNavBigDayMobile">Big Day</span></a>
+        <a class="english-only" href="travel.html"><span class="desktop-label">Travel</span><span class="mobile-label">Travel</span></a>
         <a href="things-to-do.html"><span class="desktop-label" id="thingsNavThings">Things to Do</span><span class="mobile-label" id="thingsNavThingsMobile">Plans</span></a>
         <a href="gallery.html"><span class="desktop-label" id="thingsNavGallery">Gallery</span><span class="mobile-label" id="thingsNavGalleryMobile">Photos</span></a>
         <a class="english-attire-only" href="attire.html"><span class="desktop-label" id="thingsNavAttire">Attire</span><span class="mobile-label" id="thingsNavAttireMobile">Attire</span></a>
-        <a href="faq.html"><span class="desktop-label" id="thingsNavFaq">FAQ</span><span class="mobile-label" id="thingsNavFaqMobile">FAQ</span></a>
-        <a href="https://www.zola.com/wedding/luisandphil/rsvp" id="thingsNavRsvp">RSVP</a>
+        <a href="faq.html"><span class="desktop-label" id="thingsNavFaq">Q&amp;A</span><span class="mobile-label" id="thingsNavFaqMobile">Q&amp;A</span></a>
+        <a href="https://www.zola.com/wedding/luisandphil/rsvp" target="_blank" rel="noopener noreferrer" id="thingsNavRsvp">RSVP</a>
       </nav>
       <div class="header-actions">
         <button class="lang-toggle" id="thingsLanguageToggle" type="button" aria-label="Switch language">ES</button>
-        <a class="rsvp-link" href="https://www.zola.com/wedding/luisandphil/rsvp" id="thingsRsvp">RSVP</a>
+        <a class="rsvp-link" href="https://www.zola.com/wedding/luisandphil/rsvp" target="_blank" rel="noopener noreferrer" id="thingsRsvp">RSVP</a>
       </div>
     </header>
 
@@ -99,6 +100,18 @@
             <p id="debodBody">A lovely stop, especially later in the day. The setting is peaceful and it's one of the nicest places in Madrid for sunset views.</p>
             <a class="button primary" href="https://en.wikipedia.org/wiki/Temple_of_Debod" target="_blank" rel="noreferrer" id="debodLink">Learn more</a>
           </article>
+
+          <article class="city-card">
+            <h3 id="riuTitle">Riu Plaza España Rooftop</h3>
+            <p id="riuBody">Head up to the 360º Rooftop Bar for panoramic views across Madrid. It is an especially lovely stop around sunset.</p>
+            <a class="button primary" href="https://www.riu.com/en/hotel/spain/madrid/hotel-riu-plaza-espana/gastronomy" target="_blank" rel="noreferrer" id="riuLink">Visit site</a>
+          </article>
+
+          <article class="city-card">
+            <h3 id="plazaMayorTitle">Plaza Mayor</h3>
+            <p id="plazaMayorBody">A historic square in the heart of old Madrid, perfect for a stroll and an easy starting point for exploring the city center.</p>
+            <a class="button primary" href="https://www.esmadrid.com/en/tourist-information/plaza-mayor-madrid" target="_blank" rel="noreferrer" id="plazaMayorLink">Learn more</a>
+          </article>
         </div>
       </section>
 
@@ -122,8 +135,8 @@
           navGalleryMobile: "Photos",
           navAttire: "Attire",
           navAttireMobile: "Attire",
-          navFaq: "FAQ",
-          navFaqMobile: "FAQ",
+          navFaq: "Q&A",
+          navFaqMobile: "Q&A",
           navRsvp: "RSVP",
           rsvp: "RSVP",
           heroKicker: "Around the wedding weekend",
@@ -155,6 +168,12 @@
           debodTitle: "Temple of Debod",
           debodBody: "A lovely stop, especially later in the day. The setting is peaceful and it's one of the nicest places in Madrid for sunset views.",
           debodLink: "Learn more",
+          riuTitle: "Riu Plaza España Rooftop",
+          riuBody: "Head up to the 360º Rooftop Bar for panoramic views across Madrid. It is an especially lovely stop around sunset.",
+          riuLink: "Visit site",
+          plazaMayorTitle: "Plaza Mayor",
+          plazaMayorBody: "A historic square in the heart of old Madrid, perfect for a stroll and an easy starting point for exploring the city center.",
+          plazaMayorLink: "Learn more",
           footer: "Phillip & Luis / Madrid Weekend",
         },
         es: {
@@ -169,8 +188,8 @@
           navGalleryMobile: "Fotos",
           navAttire: "Vestimenta",
           navAttireMobile: "Vestir",
-          navFaq: "Preguntas",
-          navFaqMobile: "FAQ",
+          navFaq: "Q&A",
+          navFaqMobile: "Q&A",
           navRsvp: "Confirmar",
           rsvp: "Confirmar",
           heroKicker: "Alrededor del fin de semana de la boda",
@@ -202,6 +221,12 @@
           debodTitle: "Templo de Debod",
           debodBody: "Una visita muy agradable, especialmente al final del día. El entorno es tranquilo y es uno de los sitios más bonitos de Madrid para ver el atardecer.",
           debodLink: "Más información",
+          riuTitle: "Azotea del Riu Plaza España",
+          riuBody: "Subid al 360º Rooftop Bar para disfrutar de vistas panorámicas de Madrid. Es un plan especialmente bonito al atardecer.",
+          riuLink: "Visitar web",
+          plazaMayorTitle: "Plaza Mayor",
+          plazaMayorBody: "Una plaza histórica en pleno corazón del Madrid antiguo, perfecta para pasear y comenzar a recorrer el centro de la ciudad.",
+          plazaMayorLink: "Más información",
           footer: "Phillip & Luis / Fin de Semana en Madrid",
         },
       };
@@ -251,6 +276,12 @@
         debodTitle: document.querySelector("#debodTitle"),
         debodBody: document.querySelector("#debodBody"),
         debodLink: document.querySelector("#debodLink"),
+        riuTitle: document.querySelector("#riuTitle"),
+        riuBody: document.querySelector("#riuBody"),
+        riuLink: document.querySelector("#riuLink"),
+        plazaMayorTitle: document.querySelector("#plazaMayorTitle"),
+        plazaMayorBody: document.querySelector("#plazaMayorBody"),
+        plazaMayorLink: document.querySelector("#plazaMayorLink"),
         footer: document.querySelector("#thingsFooter"),
         toggle: document.querySelector("#thingsLanguageToggle"),
       };
