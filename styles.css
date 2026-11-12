@@ -241,14 +241,6 @@ a {
   color: var(--deep);
 }
 
-.personal-note {
-  width: min(36rem, 100%);
-  margin: 1rem auto 0;
-  color: var(--deep);
-  font-size: clamp(0.82rem, 1.5vw, 0.98rem);
-  line-height: 1.65;
-}
-
 .countdown {
   display: flex;
   justify-content: center;
