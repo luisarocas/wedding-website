@@ -193,16 +193,16 @@ a {
 }
 
 .hero {
-  min-height: calc(100vh - 4.25rem);
+  min-height: auto;
   display: grid;
   place-items: center;
-  padding: clamp(3rem, 6vw, 5.5rem) 1.25rem clamp(7rem, 15vw, 12rem);
+  padding: clamp(1.1rem, 2vw, 1.5rem) 1.25rem 1rem;
   text-align: center;
 }
 
 .hero-inner {
   width: min(62rem, 100%);
-  transform: translateY(clamp(3.8rem, 8.8vh, 6.4rem));
+  transform: none;
 }
 
 .hero h1 {
@@ -283,8 +283,8 @@ html[lang="en"] .rsvp-prompt {
   text-align: center;
 }
 
-.teaser-section {
-  padding-top: clamp(2.7rem, 6vw, 4rem);
+.section.teaser-section {
+  padding-top: clamp(1rem, 2vw, 1.5rem);
 }
 
 .couple-photo-banner {
@@ -435,6 +435,13 @@ p {
   margin-top: 1rem;
   padding: clamp(1.2rem, 3vw, 1.8rem);
   text-align: center;
+}
+
+.venue-links {
+  display: grid;
+  justify-items: center;
+  gap: 0.65rem;
+  margin-top: 0.8rem;
 }
 
 .travel-cta {
@@ -1226,15 +1233,19 @@ main {
   }
 
   .hero {
-    min-height: calc(100vh - 6.25rem);
-    padding-top: 3rem;
+    min-height: auto;
+    padding-top: 0.65rem;
     padding-inline: 1.2rem;
-    padding-bottom: 48vw;
+    padding-bottom: 0.75rem;
+  }
+
+  .section.teaser-section {
+    padding-top: 1rem;
   }
 
   .hero-inner {
     width: min(21.25rem, 100%);
-    transform: translateY(2.9rem);
+    transform: none;
   }
 
   .hero h1 {
@@ -1332,11 +1343,11 @@ main {
   }
 
   .couple-photo-banner img {
-    object-position: center 32%;
+    object-position: center 36%;
   }
 
   .couple-photo-banner {
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 4 / 3;
   }
 
   .gallery-page-grid {
