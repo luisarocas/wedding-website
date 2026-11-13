@@ -882,18 +882,21 @@ html[lang="es"] .english-attire-only {
 
 .attire-copy {
   display: grid;
-  gap: 0.2rem;
+  gap: 0.65rem;
   align-content: start;
-  padding: clamp(1.35rem, 3vw, 1.9rem);
+  padding: clamp(1.1rem, 2.5vw, 1.5rem);
+  background: rgba(251, 252, 248, 0.76);
+  text-align: center;
 }
 
-.attire-copy h2,
+.attire-copy h3,
 .attire-copy p {
   margin: 0;
 }
 
-.attire-copy h2 {
-  line-height: 1.15;
+.attire-gallery .gallery-card {
+  width: 100%;
+  margin: 0;
 }
 
 .attire-gallery {
