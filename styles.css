@@ -618,6 +618,18 @@ html[lang="es"] .english-attire-only {
   box-shadow: 0 12px 36px rgba(55, 61, 45, 0.06);
 }
 
+.hotel-code {
+  margin: 0;
+  color: var(--deep);
+  font-size: 0.92rem;
+}
+
+.hotel-code code {
+  color: var(--olive);
+  font-family: inherit;
+  font-weight: 700;
+}
+
 .travel-choice-note {
   width: min(48rem, 100%);
   margin: 0 auto;
